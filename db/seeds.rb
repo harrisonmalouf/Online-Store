@@ -1,7 +1,13 @@
 User.destroy_all
 puts "Creating Users"
 # c1 = Customer.create :email => 'ajtauber@ga.co', :password => 'chicken'
-u1 = User.create :email => 'ajtauber@ga.co', :password => 'chicken', :address => '123 Burdon Street'
+# Make this Admin Later
+u1 = User.create :email => 'ajtauber@ga.co', :password => 'chicken'
+# Make this Admin Later
+u2 = User.create :email => 'harrisonford@ga.co', :password => 'chicken'
+u3 = User.create :email => 'joel@ga.co', :password => 'chicken'
+u4 = User.create :email => 'bob@ga.co', :password => 'chicken'
+u5 = User.create :email => 'steve@ga.co', :password => 'chicken'
 Game.destroy_all
 puts "Creating Games"
 # Platforms PC Xbox Playstation
@@ -44,10 +50,10 @@ puts "Creating Payments"
 # Associations
 puts "Associations"
 # User and Games
-u1.games << g1 << p1 << p2 << p3 << p5
-# Plaform and Games
-p1.games << ga1 << ga2 << g3
-ga1.platforms << ga1 << ga2
+u1.games << ga1 << ga2 << ga3 << ga4
+u2.games << ga2 << ga3 << ga4 << ga5
+u3.games << ga5 << ga6 << ga7 << ga8
+
 # Genres and Games
-ge.games << ga1 << g2 << g3 << g4
+# ge.games << ga1 << g2 << g3 << g4
 # Payment and Games and User
