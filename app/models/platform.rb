@@ -11,4 +11,5 @@
 #
 
 class Platform < ApplicationRecord
+  
 end
