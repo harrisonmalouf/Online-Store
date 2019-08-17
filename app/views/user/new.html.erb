@@ -1,6 +1,6 @@
 <h1>Create A Profile</h1>
 
-<% if @user.error.any? %>
+<% if @user.errors.any? %>
   <ol>
     <% @user.errors.full_messages.each do |m| %>
       <li><%= message  %></li> <%# check where "message" is going or if its just a text area %>
