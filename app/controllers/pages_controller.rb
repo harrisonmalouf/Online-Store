@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
 
   def home
+    
   end
 
   def create
@@ -9,7 +10,6 @@ class PagesController < ApplicationController
       home_page.image = req["public_id"]
       home_page.save
     end
-    redirect_to home_page
   end
 
 end
