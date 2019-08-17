@@ -1,6 +1,6 @@
 <h1>Create A Profile</h1>
 
-<% if @user.error.any? %>
+<% if @user.errors.any? %>
   <ol>
     <% @user.errors.full_messages.each do |m| %>
       <li><%= message  %></li> <%# check where "message" is going or if its just a text area %>
@@ -16,7 +16,17 @@
 
 <p>
   <%= f.label :user_name,:class => "badge badge-secondary" %>
-  <%= f._field :user_name, :required => true %>
+  <%= f.user_name_field :user_name, :required => true %>
+</p>
+
+<p>
+  <%= f.label :address,:class => "badge badge-secondary" %>
+  <%= f.address_field :address, :required => true %>
+</p>
+
+<p>
+  <%= f.label :email,:class => "badge badge-secondary" %>
+  <%= f.email_field :email, :required => true %>
 </p>
 
 <p>
