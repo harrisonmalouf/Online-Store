@@ -9,6 +9,8 @@ class PagesController < ApplicationController
       req = Cloudinary::Uploader.upload(params[:file])
       home_page.image = req["public_id"]
       home_page.save
+    end
+    redirect_to home
   end
 
 end
