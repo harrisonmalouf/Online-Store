@@ -3,6 +3,11 @@ class UserController < ApplicationController
   end
 
   def new
+    @User = User.new
+  end
+
+  def create
+    @user = User.new user_params
   end
 
   def edit
