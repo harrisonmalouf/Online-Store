@@ -9,6 +9,7 @@
 #  price        :float
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
+#  Description  :string
 #
 
 class Game < ApplicationRecord
