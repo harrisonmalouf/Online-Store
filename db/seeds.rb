@@ -50,9 +50,9 @@ puts "Creating Payments"
 # Associations
 puts "Associations"
 # User and Games
-u1.games << ga1 << ga2 << ga3 << ga4
-u2.games << ga2 << ga3 << ga4 << ga5
-u3.games << ga5 << ga6 << ga7 << ga8
+# u1.games << ga1 << ga2 << ga3 << ga4
+# u2.games << ga2 << ga3 << ga4 << ga5
+# u3.games << ga5 << ga6 << ga7 << ga8
 
 # Genres and Games
 # ge.games << ga1 << g2 << g3 << g4
