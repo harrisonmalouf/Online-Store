@@ -14,36 +14,36 @@
 <div class="input-group-prepend">
   <span class="input-group-text" id="basic-addon1"><%= form.label :email %></span>
 </div>
-<%= form.email_field :email, :class => 'form-control', :placeholder='Email' %>
+<%= form.email_field :email, :class => 'form-control' %>
 </div>
 
 <div class="input-group mb-3">
 <div class="input-group-prepend">
   <span class="input-group-text" id="basic-addon1"><%= form.label :user_name %></span>
 </div>
-<%= form.user_name_field :user_name, :class => 'form-control', :placeholder='The Muffin Man!'%>
+<%= form.text_field :user_name, :class => 'form-control'%>
 </div>
 
 <div class="input-group mb-3">
 <div class="input-group-prepend">
-  <span class="input-group-text" id="basic-addon1"><%= form.label :adress %></span>
+  <span class="input-group-text" id="basic-addon1"><%= form.label :address %></span>
 </div>
-<%= form.adress_field :adress, :class => 'form-control', :placeholder='5 chicken street'%>
+<%= form.text_field :address, :class => 'form-control'%>
 </div>
 
 <div class="input-group mb-3">
 <div class="input-group-prepend">
   <span class="input-group-text" id="basic-addon1"><%= form.label :password %></span>
 </div>
-<%= form.password_field :password, :class => 'form-control', :placeholder='password1'%>
+<%= form.password_field :password, :class => 'form-control', :placeholder =>'password1'%>
 </div>
 
 <div class="input-group mb-3">
 <div class="input-group-prepend">
   <span class="input-group-text" id="basic-addon1"><%= form.label :password_confirmation %></span>
 </div>
-<%= form.password_confirmation_field :password_confirmation, :class => 'form-control', :placeholder='The Muffin Man!'%>
+<%= form.password_field :password_confirmation, :class => 'form-control', :placeholder => 'The Muffin Man!'%>
 </div>
 
-  <%= f.submit "Sign up!", :class => "btn btn-primary" %>
+  <%= form.submit "Sign up!", :class => "btn btn-primary" %>
 <% end %>

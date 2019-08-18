@@ -1,4 +1,4 @@
-class UserController < ApplicationController
+class UsersController < ApplicationController
   before_action :check_for_login, :only => [:edit, :update]
   before_action :check_for_admin, :only => [:index]
 
@@ -7,7 +7,7 @@ class UserController < ApplicationController
   end
 
   def new
-    @User = User.new
+    @user = User.new
   end
 
   def create
@@ -16,7 +16,7 @@ class UserController < ApplicationController
        session[:user_id] = @user.id
        redirect_to root_path
      else
-       render: new
+       render :new
      end
   end
 
@@ -30,7 +30,7 @@ class UserController < ApplicationController
   end
 
   private
-  def users_params
+  def user_params
     params.require(:user).permit(:email, :user_name, :address, :password, :password_confirmation)
   end
 end

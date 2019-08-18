@@ -3,7 +3,7 @@
 <% if @user.errors.any? %>
   <ol>
     <% @user.errors.full_messages.each do |m| %>
-      <li><%= message  %></li> <%# check where "message" is going or if its just a text area %>
+      <li><%= m %></li> <%# check where "message" is going or if its just a text area %>
     <% end %>
   </ol>
 <% end %>
