@@ -10,7 +10,7 @@ u5 = User.create :email => 'steve@ga.co', :password => 'chicken'
 Game.destroy_all
 puts "Creating Games"
 # Platforms PC Xbox Playstation
-ga1 = Game.create :name => 'Halo : Combat Evolved', :price => '100.00', :release_date => '2001-11-15', :genre =>'First-person shooter', :image => '', :description => 'Halo overwhelmed us when it first arrived... and not just because of the massive Microsoft marketing push. The sci-fi shooter simply excels in so many categories that its hard to know where to begin the praise. There are, of course, the big things. The action is spectacular, constant, and a breeze to master. At the time, Halos control scheme was the most intuitive a console FPS had ever seen. More impressively, the deep and engrossing story feels like an organic part of the gameplay experience, never overshadowing or taking a back seat to the battles. The visuals proved what the Xbox was capable of technically in 2001 and the music proved what it was capable of artistically.'
+ga1 = Game.create :name => 'Halo : Combat Evolved', :price => '100.00', :release_date => '2001-11-15', :genre =>'First-person shooter', :image => './app/assets/images/', :description => 'Halo overwhelmed us when it first arrived... and not just because of the massive Microsoft marketing push. The sci-fi shooter simply excels in so many categories that its hard to know where to begin the praise. There are, of course, the big things. The action is spectacular, constant, and a breeze to master. At the time, Halos control scheme was the most intuitive a console FPS had ever seen. More impressively, the deep and engrossing story feels like an organic part of the gameplay experience, never overshadowing or taking a back seat to the battles. The visuals proved what the Xbox was capable of technically in 2001 and the music proved what it was capable of artistically.'
 ga2 = Game.create :name => 'Halo 2', :price => '100.00', :release_date => '2004-11-09', :genre =>'First-person shooter', :image => '', :description => 'The original Halo may have single-handedly sold the majority of Xbox consoles, but its sequel was the game that truly defined the big black box. The action was improved. New features like dual weapon wielding, vehicle jacking, and access to the all-powerful, all-badass energy sword twist the gameplay in just the right places. The plot was better. The revelation that you got to play as a Covenant soldier takes the story in an unexpectedly complex and morally ambiguous direction. And of course, the graphics were enhanced.'
 ga3 = Game.create :name => 'Star Wars: Knights of the Old Republic', :price => '100.00', :release_date => '2003-07-15', :genre =>'Role-playing', :image => '', :description => 'Set 1,000 years before the Star Wars films, Knights of the Old Republic gives you the chance to explore a galaxy torn between the Republic and the Empire-like Sith. As an amnesiac Jedi with a major secret, you travel from planet to planet, righting wrongs (or wronging them even further), gathering followers, and busting out the crazy Force powers in all-or-nothing lightsaber battles.'
 ga4 = Game.create :name => 'Ninja Gaiden', :price => '100.00', :release_date => '2004-03-02', :genre =>'Action-adventure', :image => '', :description => 'One of the most hotly anticipated games in the history of the Xbox, Ninja Gaiden lived up to the lofty expectations that developer Team Ninjas Dead or Alive fighting-and-cheesecake series could never quite match. From the first second you slipped the disc into the Xbox the game was brutally intense, with punishing difficulty; your only option was to get good at it, and fast. The reward was being able to play one of the most engrossing action-adventure games ever.'
@@ -48,6 +48,16 @@ puts "Creating Genres"
 # Payment
 Payment.destroy_all
 puts "Creating Payments"
+# t.string "first_name"
+# t.string "last_name"
+# t.text "address"
+# t.text "credit_card_name"
+# t.integer "credit_card_number"
+# t.integer "cvv"
+# t.integer "card_expire_date"
+# t.datetime "created_at", null: false
+# t.datetime "updated_at", null: false
+p1 = Payment.create :first_name => 'AJ', :last_name => 'Tauber', :address => '123 Go St', :credit_card_name => 'Master Card', :credit_card_number => '1223344', :cvv => '132'
 # Associations
 puts "Associations"
 # User and Games

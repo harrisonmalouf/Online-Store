@@ -19,12 +19,9 @@ class GamesController < ApplicationController
   end
 
   def show
-<<<<<<< HEAD
-     @game = Game.all
-=======
+     # @game = Game.all
      @game = Game.find params[:id]
 
->>>>>>> 1073477580ce20dba5a0951ec19a295ff98ad4be
   end
 
   def destroy

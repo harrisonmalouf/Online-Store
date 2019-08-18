@@ -22,7 +22,6 @@ ActiveRecord::Schema.define(version: 2019_08_18_040004) do
     t.float "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "Description"
     t.string "description"
     t.text "genre"
     t.integer "user_id"
