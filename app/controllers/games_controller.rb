@@ -1,7 +1,9 @@
 class GamesController < ApplicationController
-
 # before_action :check_for_login, :only => [:edit, :update]
 # before_action :check_for_admin, :only => [:index]
+  def method_name
+    @game = Game.all
+  end
   def show
     @game = Game.find params[:id]
   end
@@ -14,48 +16,25 @@ class GamesController < ApplicationController
     @game = Game.find params[:id]
   end
 
-#   def index
-#     @tickets = Ticket.all
-#   end
-#
-#   def new
-#     @ticket = Ticket.new
-#   end
-#
-#   def show
-#     @ticket = Ticket.find params[:id]
-#   end
-#   def create
-#     @ticket = Ticket.new ticket_params
-#
-#     if @ticket.save
-#       session[:ticket_id] = @ticket.id
-#       redirect_to root_path
-#     else
-#       render :new
-#   end
-#
-#
-#     def edit
-#       @ticket = Ticket.find params[:id]
-#     end
-#
-#     def destroy
-#       session[:ticket_id] = nil
-#       redirect_to login_path
-#     end
-#
-#     private
-#     def ticket_params
-#         params.require(:ticket).permit(:customer_name, :price, :duration)
-#     end
-#   end
-# end
+  def create
+    @game = Game.new game_params
+
+    if @game.save
+      session[:name] = @game.id
+      redirect_to root_path
+    else
+      render :new
+    end
+  end
+
+  def destroy
+    session[:game_id] = nil
+    redirect_to login_path
+  end
 
   private
   def game_params
-    params.require(:game).permit(:name, :price)
-
+    params.require(:game).permit(:name, :release_date, :price, :description, :genre)
   end
 
 end
