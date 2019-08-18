@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
-
   root :to => 'pages#home'
 
+  resources :games
+  resources :payments
 
-  root :to => 'pages#home'
-
-get '/login' => 'session#new'
-post '/login' => 'session#create'
-delete '/login' => 'session#destroy'
+  get '/login' => 'session#new'
+  post '/login' => 'session#create'
+  delete '/login' => 'session#destroy'
 
 end

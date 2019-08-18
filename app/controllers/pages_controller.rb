@@ -14,7 +14,7 @@ class PagesController < ApplicationController
 
   end
 
-    private
+  private
   def game_params
     params.require(:game).permit(:name, :price, :image, :release_date)
   end
