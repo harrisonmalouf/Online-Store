@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  get 'games/new'
-  get 'games/edit'
-  get 'games/show'
+
   root :to => 'pages#home'
 
-
+get '/login' => 'session#new'
+post '/login' => 'session#create'
+delete '/login' => 'session#destroy'
 
 end
