@@ -6,11 +6,11 @@ class GamesController < ApplicationController
   end
 
   def new
-    @games = Game.new
+    @game = Game.new
   end
 
   def edit
-    @games = Game.find params[:id]
+    @game = Game.find params[:id]
   end
 
   def create
@@ -19,8 +19,7 @@ class GamesController < ApplicationController
   end
 
   def show
-     @games = Game.find params[:id]
-
+     @game = Game.all
   end
 
   def destroy
