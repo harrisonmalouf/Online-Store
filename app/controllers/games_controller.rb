@@ -2,15 +2,15 @@ class GamesController < ApplicationController
 # before_action :check_for_login, :only => [:edit, :update]
 # before_action :check_for_admin, :only => [:index]
   def index
-    @games = Game.all
+    @game = Game.all
   end
 
   def new
-    @games = Game.new
+    @game = Game.new
   end
 
   def edit
-    @games = Game.find params[:id]
+    @game = Game.find params[:id]
   end
 
   def create
@@ -19,7 +19,7 @@ class GamesController < ApplicationController
   end
 
   def show
-     @games = Game.find params[:id]
+     @game = Game.find params[:id]
 
   end
 
