@@ -2,7 +2,7 @@ class GamesController < ApplicationController
 # before_action :check_for_login, :only => [:edit, :update]
 # before_action :check_for_admin, :only => [:index]
   def index
-    @games = Game.all
+    @game = Game.all
   end
 
   def new
@@ -19,7 +19,12 @@ class GamesController < ApplicationController
   end
 
   def show
+<<<<<<< HEAD
      @game = Game.all
+=======
+     @game = Game.find params[:id]
+
+>>>>>>> 1073477580ce20dba5a0951ec19a295ff98ad4be
   end
 
   def destroy

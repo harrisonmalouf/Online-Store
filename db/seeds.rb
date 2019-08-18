@@ -1,6 +1,5 @@
 User.destroy_all
 puts "Creating Users"
-# c1 = Customer.create :email => 'ajtauber@ga.co', :password => 'chicken'
 # Make this Admin Later
 u1 = User.create :email => 'ajtauber@ga.co', :password => 'chicken'
 # Make this Admin Later
