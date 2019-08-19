@@ -1,6 +1,5 @@
-
-<h1>Title: <%= @game.name %> </h1>
-<div class="">
+<h1 class>Title: <%= @game.name %> </h1>
+<div class=".col-md-3">
   <ul>
     <li>Release Date: <%= @game.release_date %></li>
     <li>Genre: <%= @game.genre %></li>
@@ -8,11 +7,24 @@
   <p> Desciption: <%= @game.description %></p>
 </div>
 
+
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= @game.name %></h5>
+    <h7>Description: </h7>
+    <li>Genre: <%= @game.genre %></li>
+    <li> Release DAte: <%= @game.release_date %> </li>
+    <p> </p>
+    <p class="card-text">
+      <%= @game.description %>
+      Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+     <%= link_to 'Cart', new_order_path %>
+  </div>
+</div>
+
 <!-- Cart Button -->
 <div class="controls">
       <%= link_to '', games_path %>
 </div>
-
-<button class="nav-link right">
-  Cart: <%= link_to 'Cart', new_order_path %>
-</button>

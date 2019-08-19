@@ -7,24 +7,20 @@
   </div>
   <% end %>
   <label class="amount">
-  <span>Amount: $<%= @order.amount %></span>
+  <span>Amount: $<%= @game.price %></span>
   </label>
 </article>
 <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
   data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-  data-description="A month's subscription"
-  data-amount="<%= @order.amount %>"
+  data-description="Ordering Games"
+  data-amount="<%= @game.price %>"
   data-locale="auto"></script>
 <% end %>
 
-<%= @game.name %>
+<% @order.games.each do |game|  %>
+    <%= game.name %>
+<% end  %>
+
 <div class="controls">
   <%= link_to 'Back', games_path %>
 </div>
-
-
-<% @order.games.each do |game|  %>
-
-    <%= game.name %>
-
-<% end  %>

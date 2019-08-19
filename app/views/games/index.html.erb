@@ -1,11 +1,13 @@
 <h1>Games Index</h1>
-
-<!-- Cart Button -->
-<div class="controls">
-</div>
+<div class=".col-md-3 ">
 
 <% @games.each do |game| %>
 
   <%= link_to 'Show', game_path(game.id) %>
 
 <% end %>
+</div>
+
+<!-- Cart Button -->
+<div class="controls">
+</div>
