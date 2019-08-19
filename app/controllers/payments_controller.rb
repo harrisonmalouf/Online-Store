@@ -1,30 +1,20 @@
 class PaymentsController < ApplicationController
-  def index
-  end
+    def index
+    end
 
-  def create
-     # Amount in cents
-     @amount = 2500
+    def create
 
-     user = Stripe::User.create(
-       :email => 'user@ga.com',
-       :card => params[:stripeToken]
-     )
+    end
 
-     payment = Stripe::Payment.create(
-       # :first_name => user.id,
-       # :description => '',
+    def new
+      @payment = Payment.new
+    end
 
-     )
-  end
-  def new
-    @payment = Payment.new
-  end
+    def edit
 
-  def edit
-  end
+    end
 
-  def show
-    @payment = Payment.find params[:id]
-  end
+    def show
+      @payment = Payment.find params[:id]
+    end
 end
