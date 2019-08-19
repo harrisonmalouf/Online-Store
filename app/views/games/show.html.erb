@@ -1,18 +1,13 @@
-
-<h1>Title: <%= @game.name %> </h1>
-<div class="">
+<div class="jumbotron">
+  <h1 class="display-4"><%= @game.name %></h1>
+  <%= image_tag(@game.image, :class => "img-fluid") %>
   <ul>
-    <li>Release Date: <%= @game.release_date %></li>
-    <li>Genre: <%= @game.genre %></li>
+    <li><h5>Release Date:</h5> <%= @game.release_date %></li>
+    <li><h5>Genre:</h5> <%= @game.genre %></li>
+    <li><h6>Price:</h6> $<%= @game.price %></li>
+    <div class="max-width-text">
+    <li><h5>Desciption:</h5> <%= @game.description %></li>
+    </div>
   </ul>
-  <p> Desciption: <%= @game.description %></p>
+  <%= link_to 'Cart', new_order_path(:game => @game.id), :class => "btn btn-primary btn-lg" %>
 </div>
-
-<!-- Cart Button -->
-<div class="controls">
-      <%= link_to '', games_path %>
-</div>
-
-<button class="nav-link right">
-  Cart: <%= link_to 'Cart', new_order_path %>
-</button>

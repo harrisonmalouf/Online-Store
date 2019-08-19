@@ -26,6 +26,10 @@ def charges_params
   params.permit(:stripeEmail, :stripeToken, :order_id)
 end
 
+def game_params
+  params.require(:game).permit(:name, :price, :image)
+end
+
   def catch_exception(exception)
     flash[:error] = exception.message
   end
