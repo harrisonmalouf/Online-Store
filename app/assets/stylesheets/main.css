@@ -16,6 +16,15 @@ th, td{
   margin-left: 10px;
 }
 
+.card{
+  margin: 5px 0px
+}
+
+.card-img-top{
+  max-height: 285px;
+  max-width: 405px;
+}
+
 .btn-lg{
   margin-top: 10px;
   margin-left: 10px;
