@@ -1,2 +1,16 @@
-<h1>Payments#show</h1>
-<p>Find me in app/views/payments/show.html.erb</p>
+<div class="">
+  <h1><%= @payment.first_name%></h1>
+  <ul>
+    <li>First Name: <%= @payment.first_name %></li>
+    <li>Last Name: <%= @payment.last_name %> </li>
+    <li>Credit Card Name: <%= @payment.credit_card_name %></li>
+    <li>Credit Card Number: <%= @payment.credit_card_number %></li>
+    <li>Card Expiry Date: <%= @payment.card_expire_date %></li>
+    <li>CVV: <%= @payment.cvv %></li>
+  </ul>
+</div>
+
+<!-- Cart Button -->
+<div class="controls">
+
+</div>
