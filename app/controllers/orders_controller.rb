@@ -1,6 +1,7 @@
 class OrdersController < ApplicationController
   def new
     @order = Order.new
+    @game = Game.first
   end
 
   def index
@@ -8,7 +9,6 @@ class OrdersController < ApplicationController
   end
 
   def show
-    @order = Order.find params[:id]
   end
 
   def edit

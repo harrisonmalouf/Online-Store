@@ -1,3 +1,4 @@
+<h1>Order</h1>
 <%= form_tag orders_path do %>
 <article>
   <% if flash[:error].present? %>
@@ -15,6 +16,15 @@
   data-amount="<%= @order.amount %>"
   data-locale="auto"></script>
 <% end %>
+
+<%= @game.name %>
 <div class="controls">
-  <%= link_to 'Back', root_path %>
+  <%= link_to 'Back', games_path %>
 </div>
+
+
+<% @order.games.each do |game|  %>
+
+    <%= game.name %>
+
+<% end  %>
