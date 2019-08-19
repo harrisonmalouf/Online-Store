@@ -9,9 +9,14 @@
 #  price        :float
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
-#  Description  :string
+#  description  :string
+#  genre        :text
+#  user_id      :integer
+#  games_id     :integer
 #
 
 class Game < ApplicationRecord
-  has_many :users
+  belongs_to :user, :optional => true
+  belongs_to :payments, :optional => true
+  has_and_belongs_to_many :orders
 end

@@ -14,7 +14,6 @@
 class User < ApplicationRecord
   has_secure_password
   validates :email, :presence => true, :uniqueness => true
-  # has_and_belongs_to_many :tickets
-  # belongs_to :payment
-  belongs_to :games
+  has_many :games
+  has_many :payments
 end

@@ -1,5 +1,11 @@
 <h1>Games Index</h1>
 
+<!-- Cart Button -->
 <div class="controls">
-  
 </div>
+
+<% @games.each do |game| %>
+
+  <%= link_to 'Show', game_path(game.id) %>
+
+<% end %>

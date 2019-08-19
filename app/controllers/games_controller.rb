@@ -2,7 +2,7 @@ class GamesController < ApplicationController
 # before_action :check_for_login, :only => [:edit, :update]
 # before_action :check_for_admin, :only => [:index]
   def index
-    @game = Game.all
+    @games = Game.all
   end
 
   def new

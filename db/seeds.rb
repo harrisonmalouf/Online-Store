@@ -7,6 +7,8 @@ u2 = User.create :email => 'harrisonford@ga.co', :password => 'chicken'
 u3 = User.create :email => 'joel@ga.co', :password => 'chicken'
 u4 = User.create :email => 'bob@ga.co', :password => 'chicken'
 u5 = User.create :email => 'steve@ga.co', :password => 'chicken'
+
+puts User.count
 Game.destroy_all
 puts "Creating Games"
 # Platforms PC Xbox Playstation
@@ -47,9 +49,7 @@ ga19 = Game.create :name => 'Forza Motorsport', :price => '100.00', :release_dat
 ga20 = Game.create :name => 'Jade Empire', :price => '100.00', :release_date => '2005-04-12', :image => 'Jade_Empire_Coverart.png', :genre =>'Role Playing', :description => 'BioWares first few hits were based on established franchises, with Star Wars and Dungeons & Dragons holding up its fantastic games. Jade Empire was one of the developers first attempts at creating an entire universe of its own, and while the world isnt as involved as Mass Effects would one day be, its still incredibly interesting. Theres little wonder why fans clamor for sequels to this day.'
 Genre.destroy_all
 puts "Creating Genres"
-# Payment
-Payment.destroy_all
-puts "Creating Payments"
+
 # t.string "first_name"
 # t.string "last_name"
 # t.text "address"
@@ -57,15 +57,38 @@ puts "Creating Payments"
 # t.integer "credit_card_number"
 # t.integer "cvv"
 # t.integer "card_expire_date"
-# t.datetime "created_at", null: false
-# t.datetime "updated_at", null: false
+# Payment
+Payment.destroy_all
+puts "Creating Payments"
 p1 = Payment.create :first_name => 'AJ', :last_name => 'Tauber', :address => '123 Go St', :credit_card_name => 'Master Card', :credit_card_number => '1223344', :cvv => '132'
+
+
+
+# t.text "user_name"
+# t.text "order_name"
+# t.integer "quantity"
+# t.integer "user_id"
+# t.integer "payment_id"
+# t.float "amount"
+# t.date "date"
+# Orders
+Order.destroy_all
+puts "Creating Orders"
+o1 = Order.create :user_name => 'Gary', :order_name => '', :amount => '1000.00'
+
 # Associations
 puts "Associations"
 # User and Games
-# u1.games << ga1 << ga2 << ga3 << ga4
-# u2.games << ga2 << ga3 << ga4 << ga5
-# u3.games << ga5 << ga6 << ga7 << ga8
+puts "User and Games"
+u1.games << ga1
+u2.games << ga2
+
+puts "Games and Orders"
+o1.games << ga1 << ga2 << ga3 << ga4
+
+
+
+
 
 # Genres and Games
 # ge.games << ga1 << g2 << g3 << g4

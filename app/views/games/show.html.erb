@@ -1,6 +1,4 @@
 
-<button class="nav-link right">Cart</button>
-
 <h1>Title: <%= @game.name %> </h1>
 <div class="">
   <ul>
@@ -12,5 +10,9 @@
 
 <!-- Cart Button -->
 <div class="controls">
-
+      <%= link_to '', games_path %>
 </div>
+
+<button class="nav-link right">
+  Cart: <%= link_to 'Cart', new_order_path %>
+</button>
