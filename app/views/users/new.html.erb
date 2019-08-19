@@ -1,50 +1,49 @@
-<h1>Create A Profile</h1>
+<h1>Create Login</h1>
 
 <% if @user.errors.any? %>
   <ol>
     <% @user.errors.full_messages.each do |m| %>
-      <li><%= m %></li> <%# check where "message" is going or if its just a text area %>
+      <li><%= m %></li>
     <% end %>
   </ol>
 <% end %>
 
-<%= form_for @user do |f| %>
-<p>
-  <%= f.label :email,:class => "badge badge-secondary" %>
-  <%= f.email_field :email, :required => true %>
-</p>
+<%= form_for @user do |form| %>
 
-<p>
-  <%= f.label :user_name,:class => "badge badge-secondary" %>
-  <%= f.user_name_field :user_name, :required => true %>
-</p>
+  <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1"><%= form.label :email %></span>
+  </div>
+  <%= form.email_field :email, :class => 'form-control', :placeholder => '360noScope@gmail.com' %>
+  </div>
 
-<p>
-  <%= f.label :address,:class => "badge badge-secondary" %>
-  <%= f.address_field :address, :required => true %>
-</p>
+  <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1"><%= form.label :user_name %></span>
+  </div>
+  <%= form.text_field :user_name, :class => 'form-control', :placeholder => 'xXSn1p3r_GawDXx'%>
+  </div>
 
-<p>
-  <%= f.label :email,:class => "badge badge-secondary" %>
-  <%= f.email_field :email, :required => true %>
-</p>
+  <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1"><%= form.label :address %></span>
+  </div>
+  <%= form.text_field :address, :class => 'form-control', :placeholder => '5 Chicken Street'%>
+  </div>
 
-<p>
-  <%= f.label :email,:class => "badge badge-secondary" %>
-  <%= f.email_field :email, :required => true %>
-</p>
+  <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1"><%= form.label :password %></span>
+  </div>
+  <%= form.password_field :password, :class => 'form-control', :placeholder =>'password1'%>
+  </div>
 
-<p>
-  <%= f.label :password, :class => "badge badge-secondary" %>
-  <%= f.password_field :password, :required => true %>
-</p>
+  <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1"><%= form.label :password_confirmation %></span>
+  </div>
+  <%= form.password_field :password_confirmation, :class => 'form-control', :placeholder => 'password1'%>
+  </div>
 
-<p>
-  <%= f.label :password_confirmation, :class => "badge badge-secondary" %>
-  <%= f.password_field :password_confirmation, :required => true %>
-</p>
-
-<p>
-<%= f.submit "Sign Up", :class => "border border-success rounded-pill btn btn-dark" %>
-</p>
+    <%= form.submit "Sign up!", :class => "btn btn-primary" %>
 <% end %>

@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
 
-  def show
-  @game =  Game.find params[:id]
+  def home
+  @game =  Game.all
   end
 
   def create
