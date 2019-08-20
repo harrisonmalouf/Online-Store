@@ -1,7 +1,7 @@
 class OrdersController < ApplicationController
   def new
     @order = Order.new
-    @game = Game.first
+    @game = Game.find params[:game]
   end
 
   def index
