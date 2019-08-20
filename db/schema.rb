@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2019_08_19_043027) do
     t.integer "order_id"
   end
 
-  create_table "games_users", force: :cascade do |t|
+  create_table "games_users", id: false, force: :cascade do |t|
     t.integer "game_id"
     t.integer "user_id"
   end
@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(version: 2019_08_19_043027) do
     t.date "date"
   end
 
-  create_table "payment_users", force: :cascade do |t|
+  create_table "payment_users", id: false, force: :cascade do |t|
     t.integer "payment_id"
     t.integer "user_id"
   end
