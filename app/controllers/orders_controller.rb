@@ -27,7 +27,6 @@ class OrdersController < ApplicationController
 
     @amount = 500
     # @amount = @amount * 100
-    
 
   rescue Stripe::CardError => e
     flash[:error] = e.message
