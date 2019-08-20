@@ -50,27 +50,10 @@ ga20 = Game.create :name => 'Jade Empire', :price => '100.00', :release_date => 
 Genre.destroy_all
 puts "Creating Genres"
 
-# t.string "first_name"
-# t.string "last_name"
-# t.text "address"
-# t.text "credit_card_name"
-# t.integer "credit_card_number"
-# t.integer "cvv"
-# t.integer "card_expire_date"
 # Payment
 Payment.destroy_all
 puts "Creating Payments"
-p1 = Payment.create :first_name => 'AJ', :last_name => 'Tauber', :address => '123 Go St', :credit_card_name => 'Master Card', :credit_card_number => '1223344', :cvv => '132'
 
-
-
-# t.text "user_name"
-# t.text "order_name"
-# t.integer "quantity"
-# t.integer "user_id"
-# t.integer "payment_id"
-# t.float "amount"
-# t.date "date"
 # Orders
 Order.destroy_all
 puts "Creating Orders"
@@ -84,8 +67,7 @@ u1.games << ga1
 u2.games << ga2
 
 puts "Games and Orders"
-o1.games << ga1 << ga2 << ga3 << ga4
-
+o1.games << ga1
 
 
 

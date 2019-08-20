@@ -19,10 +19,10 @@ class GamesController < ApplicationController
   end
 
   def show
-     # @game = Game.all
      @game = Game.find params[:id]
-
-  end
+     videos = Yt::Collections::Videos.new
+     @id = videos.where(q: @game.name + ' Trailer', order: 'viewCount').first.id
+   end
 
   def destroy
     session[:game_id] = nil
