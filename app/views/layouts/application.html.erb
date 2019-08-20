@@ -12,30 +12,18 @@
   </head>
 
   <body>
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <%= link_to 'Home', root_path, :class => "nav-link active" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Sign-Up', new_user_path, :class => "nav-link active" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Login', login_path, :class => "nav-link active" %>
+      </li>
+    </ul>
 
-
-    <div class="container">
-      <nav class="nav">
-      <!--Add Paths here-->
-      <%= link_to 'Games', games_path %>
-      |
-      <%= link_to 'New Games', new_game_path %>
-      |
-      <%= link_to 'Show Games', games_path %>
-      |
-      <%= link_to '#'%>
-      |
-      <%= link_to '#'%>
-      |
-
-    <div class="nav-login">
-      <%= link_to 'Sign-Up' %>
-      |
-      <%= link_to 'Login', login_path %> <!--login_path = get '/login'-->
-
-    <div>
-      </nav>
-    </div>
     <%= yield %>
   </body>
 </html>

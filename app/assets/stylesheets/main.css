@@ -1,23 +1,13 @@
 body {
   background: lightblue;
-  /*color: white;*/
-}
-/* Tables  */
-table, th, td{
-  margin-left: 300px;
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-th, td{
-    padding: 15px;
 }
 
-.title{
-  margin-left: 10px;
+div .col-sm {
+  padding-top: 5px;
 }
 
-.card{
-  margin: 5px 0px
+li {
+  list-style-type: none;
 }
 
 .card-img-top{
@@ -30,92 +20,9 @@ th, td{
   margin-left: 10px;
 }
 
-.login{
-  margin: 100px;
-}
-
-ul{
-  list-style: none;
-}
-
-/* NAV Bars */
-.nav{
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    width: 1200px;
-    background: black;
-    color: white;
-    padding-left: 25px;
-    font-size: 20px;
-}
-
-.nav-login{
-  text-align: center;
-  display: flex;
-  justify-content: space-between;
-  width: 1500px;
-  text-align: right;
-  background: black;
-  color: white;
-}
-
-
-.d-block{
-  width: 100;
-  height: 100;
-}
-/* TICKET PAGE */
-
-/* Login Page */
-.container{
-
-}
-
-/* Application  */
-.profile{
-  text-align: center;
-  margin-top: 100px;
-  background-image: url(images/ski1.png);
-}
-
-.address{
-
-}
-/* View Profile Page  */
-.view{
-
-  text-align: center;
-}
-/* About Page */
-.facts{
-  margin-left: 100px;
-}
-/*  */
-.box{
-  margin: 0 auto;
-  width:400px;
-  height:400px;
-}
-
-.white {
-  background: grey;
-  color: black;
-}
-
-/* Home Page */
-.center{
-  text-align: center;
-  /* margin-left: 100px; */
-}
 /* Carrosoul */
 .slide{
   margin: 0 auto;
   width: 900px;
   height: 350px;
-}
-.rows {
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
 }

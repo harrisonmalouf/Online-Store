@@ -13,7 +13,7 @@
 <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
   data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
   data-description="Ordering Games"
-  data-amount="<%= @game.price %>"
+  data-amount="1000"
   data-locale="auto"></script>
 <% end %>
 
