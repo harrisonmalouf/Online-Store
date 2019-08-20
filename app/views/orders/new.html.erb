@@ -19,9 +19,19 @@
   data-locale="auto"></script>
   <% end %>
 
-  <% @order.games.each do |game|  %>
-    <%= game.name %>
-<% end  %>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <%= @game.name %>
+      </div>
+      <div class="col-sm">
+        <%= @game.price %>
+      </div>
+      <div class="col-sm">
+        <%= @game.image %>
+      </div>
+    </div>
+  </div>
 
 <div class="controls">
   <%= link_to 'Back', game_path(params[:game]) %>

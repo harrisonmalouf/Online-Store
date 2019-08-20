@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_19_043027) do
+ActiveRecord::Schema.define(version: 2019_08_20_063641) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 2019_08_19_043027) do
     t.text "genre"
     t.integer "user_id"
     t.integer "games_id"
+    t.integer "stock"
   end
 
   create_table "games_orders", id: false, force: :cascade do |t|
@@ -34,7 +35,7 @@ ActiveRecord::Schema.define(version: 2019_08_19_043027) do
     t.integer "order_id"
   end
 
-  create_table "games_users", id: false, force: :cascade do |t|
+  create_table "games_users", force: :cascade do |t|
     t.integer "game_id"
     t.integer "user_id"
   end
@@ -57,7 +58,7 @@ ActiveRecord::Schema.define(version: 2019_08_19_043027) do
     t.date "date"
   end
 
-  create_table "payment_users", id: false, force: :cascade do |t|
+  create_table "payment_users", force: :cascade do |t|
     t.integer "payment_id"
     t.integer "user_id"
   end

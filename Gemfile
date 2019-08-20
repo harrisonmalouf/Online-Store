@@ -52,4 +52,7 @@ gem 'jquery-rails'
 gem 'bootstrap'
 gem 'cloudinary'
 gem 'stripe'
+
 gem 'yt', '~> 0.32.0'
+
+gem 'rails_12factor', group: :production
