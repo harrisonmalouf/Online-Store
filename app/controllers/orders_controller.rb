@@ -1,7 +1,8 @@
 class OrdersController < ApplicationController
   def new
     @order = Order.new
-    @game = Game.first
+    @game = Game.find params[:game]
+    session[:game_id] = params[:game]
   end
 
   def index
@@ -19,7 +20,10 @@ class OrdersController < ApplicationController
   end
 
   def create
+    @game = Game.find session[:game_id]
+
     @amount = 500
+    # @amount = @amount * 100
     customer = Stripe::Customer.create(
       :email => params[:stripeEmail],
       :source => params[:stripeToken]
@@ -34,6 +38,12 @@ class OrdersController < ApplicationController
   rescue Stripe::CardError => e
     flash[:error] = e.message
     redirect_to :root
+
+    if @order.save
+      redirect_to :root
+    else
+      render :new
+    end
   end
 
 
