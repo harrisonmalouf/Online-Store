@@ -1,21 +1,26 @@
 <div class="jumbotron">
-  <h1 class="display-4"><%= @game.name %></h1>
-  <%= image_tag(@game.image, :class => "img-fluid") %>
-  <ul class="list-unstyled">
-    <li>Release Date: <%= @game.release_date %></li>
-    <li>Genre: <%= @game.genre %></li>
-    <li>Price: $<%= @game.price %></li>
-    <li>Stock: <%= @game.stock %></li>
-    <div class="max-width-text">
-    <li>Desciption:<%= @game.description %></li>
+  <div class="game-show-info">
+    <h1 class="display-4"><%= @game.name %></h1>
+      <div class="text-center">
+        <%= image_tag(@game.image, :class => "rounded") %>
+      </div>
+    <ul class="list-unstyled">
+      <li><h6>Release Date:</h6> <%= @game.release_date %></li>
+      <li><h6>Genre:</h6> <%= @game.genre %></li>
+      <li><h6>Price:</h6> $<%= @game.price %></li>
+      <li><h6>Stock:</h6> <%= @game.stock %></li>
+      <div class="max-width-text">
+      <li><h6>Desciption:</h6> <p class="txt-holder"><%= @game.description %></p></li>
+      </div>
+    </ul>
+  </div>
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<%= @id   %>"   frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;   <picture-in-></picture-in->picture" allowfullscreen></iframe>
     </div>
-  </ul>
   <% if @game.stock > 0  %>
     <%= link_to 'Cart', new_order_path(:game => @game.id), :class => "btn btn-primary btn-lg" %>
     <% else %>
     <h1 class="red">Out of stock</h1>
     <% end %>
-  <div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<%= @id %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
+
 </div>

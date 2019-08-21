@@ -8,8 +8,17 @@ body {
 }
 
 .img-order{
-  display: block;
   padding: 20% 20%;
+}
+
+
+.text-holder {
+  display: 2vh;
+}
+
+.embed-responsive {
+  max-width: 300px;
+  max-height: 300px;
 }
 
 div .col-sm {
