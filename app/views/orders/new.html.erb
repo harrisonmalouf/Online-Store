@@ -1,5 +1,22 @@
 <div class="container">
   <h1>Order</h1>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <p class="order-ptag"><%= @game.name %></p>
+      </div>
+      <div class="col-sm">
+        <p class="order-ptag"><%= @game.price %></p>
+      </div>
+      <div class="col-sm">
+        <div class="img-order">
+          <%= image_tag(@game.image, :class => "payment-img") %>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <%= form_tag orders_path do %>
   <article>
     <% if flash[:error].present? %>
@@ -18,20 +35,6 @@
   data-amount=<%= @game.price * 100 %>
   data-locale="auto"></script>
   <% end %>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-sm">
-        <%= @game.name %>
-      </div>
-      <div class="col-sm">
-        <%= @game.price %>
-      </div>
-      <div class="col-sm">
-        <%= @game.image %>
-      </div>
-    </div>
-  </div>
 
 <div class="controls">
   <%= link_to 'Back', game_path(params[:game]) %>
