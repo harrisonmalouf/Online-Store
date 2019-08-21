@@ -1,6 +1,7 @@
 class GamesController < ApplicationController
 before_action :check_for_login, :only => [:edit, :update]
 before_action :check_for_admin, :only => [:index]
+
   def index
     @games = Game.all
   end
@@ -21,9 +22,14 @@ before_action :check_for_admin, :only => [:index]
     # @games
     # search results view
   end
+
   def create
     game = Game.create game_params
     redirect_to game
+  end
+
+  def stock
+    @game = Game.all
   end
 
   def show

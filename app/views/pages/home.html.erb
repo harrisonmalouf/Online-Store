@@ -42,7 +42,7 @@
         </ul>
         <div class="card-body">
           <a href="<%= game_path(game[0].id) %>" class="card-link">More Information</a>
-          <a href="#" class="card-link">Purchase</a>
+          <a href="<%= new_order_path(:game => game[0].id) %>" class="card-link">Purchase</a>
         </div>
       </div>
     </div>
@@ -62,7 +62,7 @@
         </ul>
         <div class="card-body">
           <a href="<%= game_path(game[1].id) %>" class="card-link">More Information</a>
-          <a href="#" class="card-link">Purchase</a>
+          <a href="<%= new_order_path(:game => game[1].id) %>" class="card-link">Purchase</a>
         </div>
       </div>
     </div>

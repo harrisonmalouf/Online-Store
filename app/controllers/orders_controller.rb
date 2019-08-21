@@ -28,15 +28,6 @@ class OrdersController < ApplicationController
     @amount = 500
     # @amount = @amount * 100
 
-  rescue Stripe::CardError => e
-    flash[:error] = e.message
-    redirect_to :root
-
-    if @order.save
-      redirect_to :root
-    else
-      render :new
-    end
   end
 
 
