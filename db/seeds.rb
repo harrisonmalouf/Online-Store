@@ -1,7 +1,7 @@
 User.destroy_all
 puts "Creating Users"
 # Make this Admin Later
-u1 = User.create :email => 'ajtauber@ga.co', :password => 'chicken'
+u1 = User.create :email => 'ajtauber@ga.co', :password => 'chicken', :admin => true
 # Make this Admin Later
 u2 = User.create :email => 'harrisonford@ga.co', :password => 'chicken'
 u3 = User.create :email => 'joel@ga.co', :password => 'chicken'
@@ -39,7 +39,7 @@ ga13 = Game.create :name => 'Burnout 3: Takedown', :price => '100.00', :release_
 
 ga14 = Game.create :name => 'Star Wars Battlefront II', :price => '100.00', :release_date => '2005-10-31', :image => 'StarWarsBattlefront2_PC.jpg', :genre =>'Action', :description => 'Intensity and authenticity: Those two qualities stand out in this first- (and third-) person shooter from a galaxy far, far away. Developer Pandemic expertly rendered battlegrounds near and dear to Star Wars fans, stuffed them full of heavily armed vehicles (which were mostly well-known), then kitted out nicely sized opposing armies complete with a detailed class system so that the various unit classes all feel slightly different', :stock => 74
 
-ga15 = Game.create :name => 'Beyond Good and Evil', :price => '100.00', :release_date => '2003-11-11', :image => 'BGE-cover.jpg', :genre =>'Action-adventure', :description => 'Feeling like some strange combination of The Dark Crystal, X-Files, and Independence Day as directed by Tim Burton, Beyond Good & Evil is a game that refuses to be pigeonholed. Its funny, with cutesy animal characters (one of whom wields fart-fueled jet boots) and chubby, rounded spaceships.'
+ga15 = Game.create :name => 'Beyond Good and Evil', :price => '100.00', :release_date => '2003-11-11', :image => 'BGE-cover.jpg', :genre =>'Action-adventure', :description => 'Feeling like some strange combination of The Dark Crystal, X-Files, and Independence Day as directed by Tim Burton, Beyond Good & Evil is a game that refuses to be pigeonholed. Its funny, with cutesy animal characters (one of whom wields fart-fueled jet boots) and chubby, rounded spaceships.', :stock => 50
 
 ga16 = Game.create :name => 'Fable', :price => '100.00', :release_date => '2004-09-14', :image => 'Fablebox.jpg', :genre =>'Role-playing', :description => 'Originally pitched as the ultimate open-ended experience, Fable was released as an unfinished, fairly linear action-RPG and an object lesson in not believing the hype. But somehow we love it anyway; for all its hacky-slashy gameplay and deep flaws, its still a rush to watch your character age, marry the girl and/or guy of his dreams and be loved or feared by mobs of villagers.', :stock => 51
 
