@@ -1,8 +1,5 @@
 <h1>Hi</h1>
 
-
-<% @game.each do |game| %>
-
-  <%= link_to 'Show', game_path(game.id) %>
-
-<% end %>
+<% @games.each do |game| %>
+<h1 class="display-4"><%= game.name %></h1>
+<%end%>

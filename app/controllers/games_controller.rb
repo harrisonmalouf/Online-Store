@@ -16,8 +16,9 @@ before_action :check_for_admin, :only => [:index]
 
   def search
     # @games = Game.find_by :name => params[:name]
-    @game = Game.where('game LIKE ?', "%#{params[:name]}%")
-    render :show
+    puts "some string"
+    @games = Game.where('name ILIKE ?', "%#{params[:name]}%")
+    render :search
     # instead find_by - .where
     # @games
     # search results view
