@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
 
   def home
-  @game =  Game.all
+  @game = Game.all
   end
 
   def create
