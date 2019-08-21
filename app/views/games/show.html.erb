@@ -5,12 +5,16 @@
         <%= image_tag(@game.image, :class => "rounded") %>
       </div>
     <ul class="list-unstyled">
-      <li><h6>Release Date:</h6> <%= @game.release_date %></li>
-      <li><h6>Genre:</h6> <%= @game.genre %></li>
-      <li><h6>Price:</h6> $<%= @game.price %></li>
-      <li><h6>Stock:</h6> <%= @game.stock %></li>
+      <li><h6 class="text-padding">Release Date:</h6> <%= @game.release_date %></li>
+
+      <li><h6 class="text-padding">Genre:</h6> <%= @game.genre %></li>
+
+      <li><h6 class="text-padding">Price:</h6> $<%= @game.price %></li>
+
+      <li><h6 class="text-padding">Stock:</h6> <%= @game.stock %></li>
+
       <div class="max-width-text">
-      <li><h6>Desciption:</h6> <p class="txt-holder"><%= @game.description %></p></li>
+      <li><h6 class="text-padding">Desciption:</h6> <p class="txt-holder"><%= @game.description %></p></li>
       </div>
     </ul>
   </div>

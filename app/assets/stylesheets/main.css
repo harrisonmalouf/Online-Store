@@ -21,6 +21,10 @@ body {
   max-height: 300px;
 }
 
+.text-padding{
+padding-top: 10px; 
+}
+
 div .col-sm {
   padding-top: 5px;
 }
