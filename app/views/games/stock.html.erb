@@ -1,16 +1,15 @@
 <div class="container">
+  <% @game.each_slice(1) do |game| %>
   <div class="row">
     <div class="col-sm">
-      Name
+      <%= game[0].name %>
     </div>
     <div class="col-sm">
-      Price
+      <%= game[0].price %>
     </div>
     <div class="col-sm">
-      Stock
-    </div>
-    <div class="col-sm">
-      + & -
+      <%= game[0].stock %> | + & -
     </div>
   </div>
+  <% end %>
 </div>

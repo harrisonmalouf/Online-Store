@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root :to => 'pages#home'
 
   get '/games/search' => 'games#search'
+  get '/games/stock' => 'games#stock'
 
   resources :games
   resources :payments, only: [:new, :create]
