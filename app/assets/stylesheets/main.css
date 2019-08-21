@@ -8,8 +8,17 @@ body {
 }
 
 .img-order{
-  display: block;
   padding: 20% 20%;
+}
+
+
+.text-holder {
+  display: 2vh;
+}
+
+.embed-responsive {
+  max-width: 300px;
+  max-height: 300px;
 }
 
 div .col-sm {
@@ -34,16 +43,27 @@ li {
   height: 100px;
   width: 100px;
 }
-/*  Show Page for Gaems */
+/*  Show Page for Games */
 .buttons{
   display: flex;
   justify-content: space-between;
   /* text-align: right; */
 }
+
+
+/* Carrosoul */
+.slide{
+  margin: 0 auto;
+
+}
+
+.div-border {
+  border: black 1px
+}
+
 .red {
 color: red;
 }
-
 
 /* Extra small devices (portrait phones, less than 576px) */
 /* No media query for `xs` since this is the default in Bootstrap */

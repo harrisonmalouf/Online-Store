@@ -8,7 +8,7 @@
       <%= game[0].price %>
     </div>
     <div class="col-sm">
-      <%= game[0].stock %> | + & -
+      <%= game[0].stock %> |<%= link_to '+', add_game_path(game[0].id), :class => "btn btn-primary btn-lg", :method => 'post' %> <%= link_to '-', sub_game_path(game[0].id), :class => "btn btn-primary btn-lg", :method => 'post' %>
     </div>
   </div>
   <% end %>
