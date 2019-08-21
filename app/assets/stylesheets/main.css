@@ -34,10 +34,17 @@ li {
   height: 100px;
   width: 100px;
 }
-
+/*  Show Page for Gaems */
+.buttons{
+  display: flex;
+  justify-content: space-between;
+  /* text-align: right; */
+}
 .red {
 color: red;
 }
+
+
 /* Extra small devices (portrait phones, less than 576px) */
 /* No media query for `xs` since this is the default in Bootstrap */
 

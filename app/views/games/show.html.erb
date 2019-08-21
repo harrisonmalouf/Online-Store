@@ -1,4 +1,12 @@
 <div class="jumbotron">
+  <div class="buttons">
+    <%= link_to 'Back', root_path, :class => "btn btn-danger btn-lg" %>
+    <% if @game.stock > 0  %>
+      <%= link_to 'Add to Cart', new_order_path(:game => @game.id), :class => "btn btn-primary btn-lg" %>
+      <% else %>
+      <h1 class="red">Out of stock</h1>
+    <% end %>
+  </div>
   <h1 class="display-4"><%= @game.name %></h1>
   <%= image_tag(@game.image, :class => "img-fluid") %>
   <ul class="list-unstyled">
@@ -10,11 +18,6 @@
     <li>Desciption:<%= @game.description %></li>
     </div>
   </ul>
-  <% if @game.stock > 0  %>
-    <%= link_to 'Cart', new_order_path(:game => @game.id), :class => "btn btn-primary btn-lg" %>
-    <% else %>
-    <h1 class="red">Out of stock</h1>
-    <% end %>
   <div class="embed-responsive embed-responsive-16by9">
     <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<%= @id %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
