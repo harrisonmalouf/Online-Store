@@ -29,8 +29,25 @@ before_action :check_for_admin, :only => [:index]
     redirect_to game
   end
 
+  def update
+    game = Game.find params[:id]
+    game.update game_params
+    redirect_to games_stock_path
+  end
+
   def stock
     @game = Game.all
+  end
+
+  def add
+    @game = Game.find params[:id]
+    update
+    # @game.update  :stock => @game.stock + 1
+  end
+
+  def sub
+    @game = Game.find params
+    @game.update  :stock => @game.stock - 1
   end
 
   def show
@@ -46,6 +63,6 @@ before_action :check_for_admin, :only => [:index]
 
   private
   def game_params
-    params.require(:game).permit(:name, :release_date, :price, :description, :image)
+    params.require(:game).permit(:name, :release_date, :price, :description, :image, :stock)
   end
 end

@@ -10,7 +10,7 @@
     <li>Desciption:<%= @game.description %></li>
     </div>
   </ul>
-  <%= link_to 'Cart', new_order_path(:game => @game.id), :class => "btn btn-primary btn-lg" %>
+  <%= link_to '+', new_order_path(:game => @game.id), :class => "btn btn-primary btn-lg" %> or <%= link_to '-'', new_order_path(:game => @game.id), :class => "btn btn-primary btn-lg" %>
   <div class="embed-responsive embed-responsive-16by9">
     <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<%= @id %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
