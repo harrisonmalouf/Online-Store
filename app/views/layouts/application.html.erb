@@ -19,21 +19,25 @@
         <%= link_to "All Users", users_path %>
       <% end %>
       <!--Add Paths here-->
+      |
+      <%= link_to 'Home', root_path %>
+      |
       <%= link_to 'Edit Profile', edit_user_path(@current_user) %>
       |
       <%= link_to 'View Profile' , user_path(@current_user) %>
       |
       <%= link_to "Log out #{ @current_user.email }", login_path, :method => 'delete', :class => 'nav-right' %>
+      </div>
       <% else %>
       <div class="nav-login">
-      <%= link_to 'Home', root_path %>  
+      <%= link_to 'Home', root_path %>
       |
       <%= link_to 'Sign Up', new_user_path %> <!-- new_customer_path = get '/...'-->
       |
       <%= link_to 'Login', login_path %> <!--login_path = get '/login'-->
     <% end %>
     <div>
-      </nav>
+
     </div>
     <%= yield %>
   </body>
