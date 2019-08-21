@@ -7,13 +7,13 @@
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <%= image_tag("Xbox-console-light.jpg", :class => "slide") %>
+      <%= image_tag("Xbox-console-light.jpg", :class => "d-block w-100") %>
     </div>
     <div class="carousel-item">
-      <%= image_tag("xbox-dark-background.jpg", :class => "slide") %>
+      <%= image_tag("xbox-dark-background.jpg", :class => "d-block w-100") %>
     </div>
     <div class="carousel-item">
-      <%= image_tag("xbox-dark-photo.jpg", :class => "slide") %>
+      <%= image_tag("xbox-dark-photo.jpg", :class => "d-block w-100") %>
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -27,10 +27,10 @@
 </div>
 
 <div class="container">
-  <% @game.each_slice(2) do |game| %>
+  <% @game.each_slice(4) do |game| %>
   <div class="row">
-    <div class="col-sm">
-      <div class="card" style="width: 18rem;">
+    <div class="col-md-3">
+      <div class="card">
         <%=  image_tag(game[0].image, :class => "card-img-top") %>
         <div class="card-body">
           <h8 class="card-title"><%= game[0].name %></h8>
@@ -42,15 +42,17 @@
         </ul>
         <div class="card-body">
           <a href="<%= game_path(game[0].id) %>" class="card-link">More Information</a>
-          <a href="<%= new_order_path(:game => game[0].id) %>" class="card-link">Purchase</a>
+
+          <% if game[0].stock> 0  %>
+            <a href="<%= new_order_path(:game => game[0].id) %>" class="card-link">Purchase</a>
+          <% else %>
+            p class="red">Out of stock<p>
+            <% end %>
         </div>
       </div>
     </div>
-    <div class="col-sm">
-
-    </div>
-    <div class="col-sm">
-      <div class="card" style="width: 18rem;">
+    <div class="col-md-3">
+      <div class="card">
         <%=  image_tag(game[1].image, :class => "card-img-top") %>
         <div class="card-body">
           <h8 class="card-title"><%= game[1].name %></h8>
@@ -62,7 +64,55 @@
         </ul>
         <div class="card-body">
           <a href="<%= game_path(game[1].id) %>" class="card-link">More Information</a>
-          <a href="<%= new_order_path(:game => game[1].id) %>" class="card-link">Purchase</a>
+
+          <% if game[1].stock > 0  %>
+            <a href="<%= new_order_path(:game => game[1].id) %>" class="card-link">Purchase</a>
+          <% else %>
+            <p class="red">Out of stock</p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <%=  image_tag(game[2].image, :class => "card-img-top") %>
+        <div class="card-body">
+          <h8 class="card-title"><%= game[2].name %></h8>
+          <p class="card-text"></p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Price:<%= game[2].price %></li>
+          <li class="list-group-item">Stock:<%= game[2].stock %></li>
+        </ul>
+        <div class="card-body">
+          <a href="<%= game_path(game[2].id) %>" class="card-link">More Information</a>
+
+          <% if game[2].stock > 0  %>
+            <a href="<%= new_order_path(:game => game[2].id) %>" class="card-link">Purchase</a>
+          <% else %>
+            <p class="red">Out of stock</p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <%=  image_tag(game[3].image, :class => "card-img-top") %>
+        <div class="card-body">
+          <h8 class="card-title"><%= game[3].name %></h8>
+          <p class="card-text"></p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Price:<%= game[3].price %></li>
+          <li class="list-group-item">Stock:<%= game[3].stock %></li>
+        </ul>
+        <div class="card-body">
+          <a href="<%= game_path(game[3].id) %>" class="card-link">More Information</a>
+          <% if game[3].stock > 0  %>
+            <a href="<%= new_order_path(:game => game[3].id) %>" class="card-link">Purchase</a>
+          <% else %>
+            <p class="red">Out of stock</p>
+          <% end %>
         </div>
       </div>
     </div>
