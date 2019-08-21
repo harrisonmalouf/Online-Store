@@ -1,12 +1,20 @@
 <h1>Games Index</h1>
 <div class=".col-md-3 ">
 
+<%= form_tag(games_search_path, :method => 'get') do %>
+   Games: <%= text_field_tag :name %>
+    <%= submit_tag 'Search', name: nil %>
+  <% end %>
+
+
 <% @games.each do |game| %>
 
   <%= link_to 'Show', game_path(game.id) %>
 
 <% end %>
 </div>
+
+
 
 <!-- Cart Button -->
 <div class="controls">
