@@ -13,32 +13,61 @@
 
   <body>
     <div class="container">
-      <nav class="nav">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Navbar</a>
       <% if @current_user.present? %>
         <% if @current_user.admin? %>
           <%= link_to "All Users", users_path %>
+          <%= link_to "Stock", games_stock_path %>
         <% end %>
-        <!--Add Paths here-->
-        |
         <%= link_to 'Home', root_path %>
-        |
         <%= link_to 'Edit Profile', edit_user_path(@current_user) %>
-        |
         <%= link_to 'View Profile' , user_path(@current_user) %>
-        |
         <%= link_to "Log out #{ @current_user.email }", login_path, :method => 'delete', :class => 'nav-right' %>
       <% else %>
-        <div class = "login">
+        <div>
           <%= link_to 'Home', root_path %>
-          |
+          <%= link_to 'Games', games_path %>
+
           <%= link_to 'Sign Up', new_user_path %>
           |
-          <%= link_to 'Login', login_path %> <!--login_path = get '/login'-->
+          <%= link_to 'Login', login_path %>
           |
-          <%= link_to 'Admin Login', login_path %>
         </div>
       <% end %>
     </nav>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+            </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+          </li>
+        </ul>
+
+
+  </div>
+</nav>
 
     <%= yield %>
   </body>

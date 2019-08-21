@@ -1,4 +1,28 @@
 <div class="jumbotron">
+<<<<<<< HEAD
+  <div class="buttons">
+    <%= link_to 'Back', root_path, :class => "btn btn-danger btn-lg" %>
+    <% if @game.stock > 0  %>
+      <%= link_to 'Add to Cart', new_order_path(:game => @game.id), :class => "btn btn-primary btn-lg" %>
+      <% else %>
+      <h1 class="red">Out of stock</h1>
+    <% end %>
+  </div>
+  <h1 class="display-4"><%= @game.name %></h1>
+  <%= image_tag(@game.image, :class => "img-fluid") %>
+  <ul class="list-unstyled">
+    <li>Release Date: <%= @game.release_date %></li>
+    <li>Genre: <%= @game.genre %></li>
+    <li>Price: $<%= @game.price %></li>
+    <li>Stock: <%= @game.stock %></li>
+    <div class="max-width-text">
+    <li>Desciption:<%= @game.description %></li>
+    </div>
+  </ul>
+  <div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<%= @id %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+=======
   <div class="game-show-info">
     <h1 class="display-4"><%= @game.name %></h1>
       <div class="text-center">
@@ -27,4 +51,5 @@
     <h1 class="red">Out of stock</h1>
     <% end %>
 
+>>>>>>> 7aee8701bf680769bb4a842651d66da7d59f3d9a
 </div>
