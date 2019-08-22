@@ -6,12 +6,10 @@
         <%= @game.name %>
       </div>
       <div class="col-sm-4">
-        Amount: $<%= @game.price %>
+        <p class="order-ptag">Amount: $<%= @game.price %></p>
       </div>
       <div class="col-sm-4">
-        <div class="">
-          <%= image_tag(@game.image, :class => "payment-img") %>
-        </div>
+        <p class="order-ptag"><%= image_tag(@game.image, :class => "payment-img") %></p>
       </div>
     </div>
 
