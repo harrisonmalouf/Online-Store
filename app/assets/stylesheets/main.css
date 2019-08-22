@@ -64,13 +64,18 @@ li {
 .slide{
   margin: 0 auto;
 }
-
+.d-block{
+  max-height: 510px;
+}
+.carousel {
+  opacity: 0.85;
+}
 .title {
   font-size: 12px;
 }
 .card-img-top {
     width: 100%;
-    height: 60vh;
+    height: 50vh;
     object-fit: cover;
 }
 
