@@ -8,13 +8,13 @@
       </tr>
   </thead>
 <% @game.each_slice(1) do |game| %>
-  <tbody>
-      <tr>
-      <td><p class="stock-page-price"><%= game[0].name %></p></td>
-      <td><p class="stock-page-price">$<%= game[0].price %></p></td>
-      <td><p class="stock-page-price"><%= game[0].stock %> |<%= link_to '+', add_game_path(game[0].id), :class => "btn btn-success", :method => 'post' %> <%= link_to '-', sub_game_path(game[0].id), :class => "btn btn-danger", :method => 'post' %></p></td>
-      </tr>
+    <tbody>
+        <tr>
+          <td><p class="stock-page-price"><%= game[0].name %></p></td>
+          <td><p class="stock-page-price">$<%= game[0].price %></p></td>
+          <td><p class="stock-page-price"><%= game[0].stock %> |<%= link_to '+', add_game_path(game[0].id), :class => "btn btn-success", :method => 'post' %> <%= link_to '-', sub_game_path(game[0].id), :class => "btn btn-danger", :method => 'post' %></p></td>
+        </tr>
     </tbody>
-  <% end %>
-</table>
+<% end %>
+  </table>
 </div>
