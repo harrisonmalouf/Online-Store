@@ -14,7 +14,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-4 primary alert alert-primary">
+      <div class="col-md-4 primary alert alert-success">
 
       <ul class="list-unstyled">
         <li class="centered-text"><h5 class="text-padding">Release Date:</h5> <%= @game.release_date %></li>
@@ -29,14 +29,14 @@
     <div class="col-md-4">
       <%= image_tag(@game.image, :class => "rounded") %>
     </div>
-    <div class="col-md-4">
-
+    <div class="col-md-4 embed-responsive embed-responsive-16by9">
+         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<%= @id   %>"   frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;   <picture-in-></picture-in->picture" allowfullscreen></iframe>
     </div>
     <div class="row">
       <div class="col-md-2">
 
       </div>
-      <div class="col-md-8 primary alert alert-primary">
+      <div class="col-md-8 primary alert alert-success">
         <h5 class="text-padding">Description:</h5><%= @game.description %>
       </div>
       <div class="col-md-2">
