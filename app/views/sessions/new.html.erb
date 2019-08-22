@@ -1,20 +1,22 @@
-<h1 class="display-4">Log in</h1>
+
 
 <p>
   <%= flash[:error_message] %>
 </p>
+<div class="jumbotron">
+  <h1 class="display-4">Log in</h1>
+    <%= form_tag login_path do %>
+      <div class="form-group">
+        <%= label_tag :email %>
+        <%= email_field_tag :email, nil, :class => 'form-control' %>
+      </div>
 
-<%= form_tag login_path do %>
-  <div class="form-group">
-    <%= label_tag :email %>
-    <%= email_field_tag :email, nil, :class => 'form-control' %>
-  </div>
+      <div class="form-group">
+        <%= label_tag :password %>
+        <%= password_field_tag :password, nil, :class => 'form-control' %>
+      </div>
 
-  <div class="form-group">
-    <%= label_tag :password %>
-    <%= password_field_tag :password, nil, :class => 'form-control' %>
-  </div>
+      <%= submit_tag "Sign in", :class => 'btn-lg btn-success' %>
 
-  <%= submit_tag "Sign in", :class => 'btn-lg btn-success' %>
-
-<% end %>
+    <% end %>
+</div>
