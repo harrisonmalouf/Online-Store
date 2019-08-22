@@ -1,9 +1,10 @@
 
 
-<p>
-  <%= flash[:error_message] %>
-</p>
+
 <div class="jumbotron">
+  <p class="red">
+    <%= flash[:error_message] %>
+  </p>
   <h1 class="display-4">Log in</h1>
     <%= form_tag login_path do %>
       <div class="form-group">
