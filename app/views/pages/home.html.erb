@@ -43,14 +43,14 @@
         </ul>
         <div class="card-body">
           <% if @current_user.present? %>
-            
-            <a href="<%= game_path(game[0].id) %>" class="btn btn-secondary">More Information</a>
+
+            <a href="<%= game_path(game[0].id) %>" class="btn btn-primary">More Information</a>
             <% end %>
         </div>
         <div class="card-body">
           <% if @current_user.present? %>
             <% if game[0].stock> 0  %>
-              <a href="<%= new_order_path(:game => game[0].id) %>" class="btn btn-secondary">Purchase</a>
+              <a href="<%= new_order_path(:game => game[0].id) %>" class="btn btn-success">Purchase</a>
             <% else %>
               <p class="red">Out of stock<p>
             <% end %>
@@ -73,13 +73,13 @@
         </ul>
         <div class="card-body">
           <% if @current_user.present? %>
-            <a href="<%= game_path(game[1].id) %>" class="btn btn-secondary">More Information</a>
+            <a href="<%= game_path(game[1].id) %>" class="btn btn-primary">More Information</a>
             <% end %>
         </div>
         <div class="card-body">
           <% if @current_user.present? %>
             <% if game[1].stock> 0  %>
-              <a href="<%= new_order_path(:game => game[1].id) %>" class="btn btn-secondary">Purchase</a>
+              <a href="<%= new_order_path(:game => game[1].id) %>" class="btn btn-success">Purchase</a>
             <% else %>
               <p class="red">Out of stock<p>
             <% end %>
@@ -101,13 +101,13 @@
       </ul>
       <div class="card-body">
         <% if @current_user.present? %>
-          <a href="<%= game_path(game[2].id) %>" class="btn btn-secondary">More Information</a>
+          <a href="<%= game_path(game[2].id) %>" class="btn btn-primary">More Information</a>
           <% end %>
       </div>
       <div class="card-body">
         <% if @current_user.present? %>
           <% if game[2].stock> 0  %>
-            <a href="<%= new_order_path(:game => game[2].id) %>" class="btn btn-secondary">Purchase</a>
+            <a href="<%= new_order_path(:game => game[2].id) %>" class="btn btn-success">Purchase</a>
           <% else %>
             <p class="red">Out of stock<p>
           <% end %>
@@ -130,13 +130,13 @@
     </ul>
     <div class="card-body">
       <% if @current_user.present? %>
-        <a href="<%= game_path(game[3].id) %>" class="btn btn-secondary">More Information</a>
+        <a href="<%= game_path(game[3].id) %>" class="btn btn-primary">More Information</a>
         <% end %>
     </div>
     <div class="card-body">
       <% if @current_user.present? %>
         <% if game[3].stock> 0  %>
-        <a href="<%= new_order_path(:game => game[3].id) %>" class="btn btn-secondary">Purchase</a>
+        <a href="<%= new_order_path(:game => game[3].id) %>" class="btn btn-success">Purchase</a>
         <% else %>
         <p class="red">Out of stock<p>
         <% end %>
