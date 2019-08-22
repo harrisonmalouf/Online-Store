@@ -1,5 +1,5 @@
 body {
-  background: green;
+  background: lightblue;
 }
 
 .order-ptag{
@@ -34,10 +34,10 @@ li {
   list-style-type: none;
 }
 
-/* .card-img-top{
+.card-img-top{
   max-height: 285px;
   max-width: 405px;
-} */
+}
 
 .btn-lg{
   margin-top: 10px;
@@ -68,6 +68,10 @@ li {
 
 .box-text {
   width: 0 auto;
+}
+
+.jumbotron {
+
 }
 
 .red {

@@ -2,7 +2,7 @@
   <div class="buttons">
     <%= link_to 'Back', root_path, :class => "btn btn-danger btn-lg" %>
     <% if @game.stock > 0  %>
-      <%= link_to 'Add to Cart', new_order_path(:game => @game.id), :class => "btn btn-primary btn-lg" %>
+      <%= link_to 'Add to Cart', new_order_path(:game => @game.id), :class => "btn btn-success btn-lg" %>
       <% else %>
       <h1 class="red">Out of stock</h1>
     <% end %>
