@@ -20,8 +20,8 @@ body {
 }
 
 .embed-responsive {
-  /* max-width: 300px;
-  max-height: 300px; */
+  max-width: 300px;
+  max-height: 300px;
 
 }
 
@@ -75,8 +75,8 @@ li {
 }
 .title {
   font-size: 14px;
-  font-weight:
-  
+  font-weight: 10px;
+
 }
 .price{
   font-size: 12px;
