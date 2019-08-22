@@ -76,7 +76,7 @@ li {
 .title {
   font-size: 14px;
   font-weight:
-  
+
 }
 .price{
   font-size: 12px;
@@ -102,4 +102,16 @@ li {
 
 .red {
 color: red;
+}
+
+/* Application.Html.erb */
+
+.test {
+  margin-left: -70px;
+  margin-right: -80px;
+ /* margin-left: -20px; */
+}
+
+.bg-light {
+  margin-left: -20px;
 }

@@ -1,12 +1,13 @@
-<h1 class="view fontalicious">Greetings <%=@current_user.user_name%></h1>
+<div class="jumbotron">
 
-  <ul class="box white">
+  <h1 class="display-4">Greetings <%=@current_user.user_name%></h1>
+  <ul class="box">
     <br>
     <li class="hvr-grow">Email: <%= @current_user.email %></li>
     <br>
     <li class="hvr-grow">User Name: <%= @current_user.user_name %></li>
     <br>
     <li class="hvr-grow">Address: <%= @current_user.address %></li>
-
-
   </ul>
+
+  </div>
