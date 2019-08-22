@@ -1,21 +1,19 @@
-<div class="container">
+<div class="jumbotron">
   <h1>Order</h1>
 
-  <div class="container">
     <div class="row">
-      <div class="col-sm">
-        <p class="order-ptag"><%= @game.name %></p>
+      <div class="col-sm-4">
+        <%= @game.name %>
       </div>
-      <div class="col-sm">
-        <p class="order-ptag"><%= @game.price %></p>
+      <div class="col-sm-4">
+        Amount: $<%= @game.price %>
       </div>
-      <div class="col-sm">
-        <div class="img-order">
+      <div class="col-sm-4">
+        <div class="">
           <%= image_tag(@game.image, :class => "payment-img") %>
         </div>
       </div>
     </div>
-  </div>
 
   <%= form_tag orders_path do %>
   <article>
@@ -24,19 +22,16 @@
       <p><%= flash[:error] %></p>
     </div>
     <% end %>
-    <label class="amount">
-    <span>Amount: $<%= @game.price %></span>
-    </label>
   </article>
-
+</div>
+<div class="row">
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
   data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
   data-description="Ordering Games"
-  data-amount=<%= @game.price * 100 %>
+  data-amount="<%= @game.price * 100 %>"
   data-locale="auto"></script>
   <% end %>
 
-<div class="controls">
+
   <%= link_to 'Back', game_path(params[:game]) %>
-</div>
 </div>
