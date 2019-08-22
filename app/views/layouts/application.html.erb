@@ -14,7 +14,7 @@
   <body>
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="">Home</a>
       <% if @current_user.present? %>
         <% if @current_user.admin? %>
           <%= link_to "All Users", users_path %>
@@ -30,9 +30,9 @@
           <%= link_to 'Games', games_path %>
 
           <%= link_to 'Sign Up', new_user_path %>
-          |
+
           <%= link_to 'Login', login_path %>
-          |
+
         </div>
       <% end %>
     </nav>
