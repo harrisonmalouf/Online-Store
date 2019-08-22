@@ -15,6 +15,10 @@ body {
   padding: 20% 20%;
 }
 
+.row-1 {
+  margin: 0 auto;
+}
+
 .embed-responsive {
   /*max-width: 300px;
   max-height: 300px;
@@ -74,9 +78,7 @@ li {
   width: 0 auto;
 }
 
-.jumbotron {
 
-}
 
 .red {
 color: red;

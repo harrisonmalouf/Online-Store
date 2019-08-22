@@ -1,16 +1,20 @@
-<div class="profile">
-<h1>Edit Profile</h1>
-<%= form_for @user do |f| %>
-  <%= f.label :email %>
-  <%= f.email_field :email %>
-<div>
-  <%= f.label :user_name %>
-  <%= f.text_field :user_name %>
-</div>
-  <%= f.label :address %>
-  <%= f.text_field :address, :class => 'address' %>
-<div>
-  <%= f.submit "Update Profile" %>
-<% end %>
-</div>
+<div class="jumbotron">
+  <h1 class="form-group">Edit Profile</h1>
+    <%= form_for @user do |f| %>
+  <div class="form-group">
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+  </div>
+  <div class="form-group">
+    <%= f.label :user_name %>
+    <%= f.text_field :user_name %>
+  </div>
+  <div class="form-group">
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+  </div>
+  <div class="form-group">
+    <%= f.submit "Update Profile" %>
+  <% end %>
+  </div>
 </div>

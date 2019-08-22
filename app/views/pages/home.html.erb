@@ -1,8 +1,7 @@
-<div class="rows">
-  <div class="col-md-4 offset-md-4">
-    <h1>Welcome to the Home Page</h1>
+  <div class="container-fluid">
+    <h1 class="display-4">Welcome to the Home Page</h1>
   </div>
-</div>
+
 
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
@@ -25,33 +24,34 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-
-<div class="container">
+<!-- --------------------------------------------------------------------- -->
+<div class="container border border-primary">
   <% @game.each_slice(4) do |game| %>
   <div class="row">
     <div class="col-md-3">
-      <div class="card">
+      <div class="card row-1">
         <%=  image_tag(game[0].image, :class => "card-img-top") %>
         <div class="card-body">
           <h8 class="card-title"><%= game[0].name %></h8>
           <p class="card-text"></p>
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">Price:<%= game[0].price %></li>
-          <li class="list-group-item">Stock:<%= game[0].stock %></li>
+          <li class="list-group-item">Price: <%= game[0].price %></li>
+          <li class="list-group-item">Stock:  <%= game[0].stock %></li>
         </ul>
         <div class="card-body">
-          <a href="<%= game_path(game[0].id) %>" class="card-link">More Information</a>
-
+          <a href="<%= game_path(game[0].id) %>" class="btn btn-secondary btn-lg">More Information</a>
+        </div>
+        <div class="card-body">
           <% if game[0].stock> 0  %>
-            <a href="<%= new_order_path(:game => game[0].id) %>" class="card-link">Purchase</a>
+            <a href="<%= new_order_path(:game => game[0].id) %>" class="btn btn-secondary">Purchase</a>
           <% else %>
             p class="red">Out of stock<p>
             <% end %>
         </div>
       </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-3 border border-primary row-1">
       <div class="card">
         <%=  image_tag(game[1].image, :class => "card-img-top") %>
         <div class="card-body">
@@ -59,21 +59,23 @@
           <p class="card-text"></p>
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">Price:<%= game[1].price %></li>
-          <li class="list-group-item">Stock:<%= game[1].stock %></li>
+          <li class="list-group-item">Price: <%= game[1].price %></li>
+          <li class="list-group-item">Stock: <%= game[1].stock %></li>
         </ul>
-        <div class="card-body">
-          <a href="<%= game_path(game[1].id) %>" class="card-link">More Information</a>
 
+        <div class="card-body" style="width: 25erm;">
+          <a href="<%= game_path(game[1].id) %>" class="btn btn-success btn-lg">More Information</a>
+        </div>
+        <div class="card-body">
           <% if game[1].stock > 0  %>
-            <a href="<%= new_order_path(:game => game[1].id) %>" class="card-link">Purchase</a>
+            <a href="<%= new_order_path(:game => game[1].id) %>" class="btn btn-secondary">Purchase</a>
           <% else %>
             <p class="red">Out of stock</p>
           <% end %>
         </div>
       </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-3 border border-primary row-1">
       <div class="card">
         <%=  image_tag(game[2].image, :class => "card-img-top") %>
         <div class="card-body">
@@ -81,21 +83,24 @@
           <p class="card-text"></p>
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">Price:<%= game[2].price %></li>
-          <li class="list-group-item">Stock:<%= game[2].stock %></li>
+          <li class="list-group-item">Price: <%= game[2].price %></li>
+          <li class="list-group-item">Stock: <%= game[2].stock %></li>
         </ul>
         <div class="card-body">
-          <a href="<%= game_path(game[2].id) %>" class="card-link">More Information</a>
-
+          <a href="<%= game_path(game[2].id) %>" class="btn btn-secondary btn-lg">More Information</a>
+        </div>
+        <div class="card-body">
           <% if game[2].stock > 0  %>
-            <a href="<%= new_order_path(:game => game[2].id) %>" class="card-link">Purchase</a>
+            <a href="<%= new_order_path(:game => game[2].id) %>" class="btn btn-secondary">Purchase</a>
           <% else %>
             <p class="red">Out of stock</p>
           <% end %>
         </div>
       </div>
     </div>
-    <div class="col-md-3">
+    <!-- --------------------------------------------------------------------- -->
+
+    <div class="col-md-3 border border-primary row-2">
       <div class="card">
         <%=  image_tag(game[3].image, :class => "card-img-top") %>
         <div class="card-body">
@@ -103,15 +108,15 @@
           <p class="card-text"></p>
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">Price:<%= game[3].price %></li>
-          <li class="list-group-item">Stock:<%= game[3].stock %></li>
+          <li class="list-group-item">Price: <%= game[3].price %></li>
+          <li class="list-group-item">Stock: <%= game[3].stock %></li>
         </ul>
         <div class="card-body">
-          <a href="<%= game_path(game[3].id) %>" class="card-link">More Information</a>
+          <a href="<%= game_path(game[3].id) %>" class="btn btn-secondary btn-lg">More Information</a>
         </div>
         <div class="card-body">
           <% if game[3].stock > 0  %>
-          <a href="<%= new_order_path(:game => game[3].id) %>" class="card-link">Purchase</a>
+          <a href="<%= new_order_path(:game => game[3].id) %>" class="btn btn-secondary">Purchase</a>
           <% else %>
           <p class="red">Out of stock</p>
           <% end %>
