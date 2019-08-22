@@ -15,14 +15,14 @@ body {
   padding: 20% 20%;
 }
 
-.row-1 {
+.reset {
   margin: 0 auto;
 }
 
 .embed-responsive {
-  /*max-width: 300px;
-  max-height: 300px;
-  */
+  /* max-width: 300px;
+  max-height: 300px; */
+
 }
 
 .centered-text {
@@ -42,10 +42,6 @@ li {
   list-style-type: none;
 }
 
-.card-img-top{
-  max-height: 285px;
-  max-width: 405px;
-}
 
 .btn-lg{
   margin-top: 10px;
@@ -63,12 +59,23 @@ li {
   /* text-align: right; */
 }
 
-
+/* Main Page */
 /* Carrosoul */
 .slide{
   margin: 0 auto;
-
 }
+
+.title {
+  font-size: 12px;
+}
+.card-img-top {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+}
+
+
+
 
 .div-border {
   border: black 1px
@@ -78,8 +85,18 @@ li {
   width: 0 auto;
 }
 
+.card-body {
+  min-height: 94px;
+}
+
 
 
 .red {
 color: red;
+}
+
+
+
+@media (min-width: 775px){
+
 }

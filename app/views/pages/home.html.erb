@@ -25,14 +25,15 @@
   </a>
 </div>
 <!-- --------------------------------------------------------------------- -->
-<div class="container border border-primary">
+<div class="container">
   <% @game.each_slice(4) do |game| %>
   <div class="row">
+    <!--TAKE THIS -->
     <div class="col-md-3">
-      <div class="card row-1">
-        <%=  image_tag(game[0].image, :class => "card-img-top") %>
+      <div class="card reset">
+        <div class="img-wrap"><%=  image_tag(game[0].image, :class => "card-img-top") %></div>
         <div class="card-body">
-          <h8 class="card-title"><%= game[0].name %></h8>
+          <h4 class="card-title title"><%= game[0].name %></h4>
           <p class="card-text"></p>
         </div>
         <ul class="list-group list-group-flush">
@@ -40,89 +41,77 @@
           <li class="list-group-item">Stock:  <%= game[0].stock %></li>
         </ul>
         <div class="card-body">
-          <a href="<%= game_path(game[0].id) %>" class="btn btn-secondary btn-lg">More Information</a>
+          <% if @current_user.present? %>
+            <a href="<%= game_path(game[0].id) %>" class="btn btn-secondary">More Information</a>
+            <% end %>
         </div>
         <div class="card-body">
           <% if game[0].stock> 0  %>
             <a href="<%= new_order_path(:game => game[0].id) %>" class="btn btn-secondary">Purchase</a>
           <% else %>
-            p class="red">Out of stock<p>
+            <p class="red">Out of stock<p>
             <% end %>
         </div>
       </div>
     </div>
-    <div class="col-md-3 border border-primary row-1">
-      <div class="card">
-        <%=  image_tag(game[1].image, :class => "card-img-top") %>
+
+    <!-- Column 2: -->
+    <div class="col-md-3">
+      <div class="card reset">
+        <div class="img-wrap"><%=  image_tag(game[1].image, :class => "card-img-top") %></div>
         <div class="card-body">
-          <h8 class="card-title"><%= game[1].name %></h8>
+          <h4 class="card-title title"><%= game[1].name %></h4>
           <p class="card-text"></p>
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item">Price: <%= game[1].price %></li>
-          <li class="list-group-item">Stock: <%= game[1].stock %></li>
+          <li class="list-group-item">Stock:  <%= game[1].stock %></li>
         </ul>
-
-        <div class="card-body" style="width: 25erm;">
-          <a href="<%= game_path(game[1].id) %>" class="btn btn-success btn-lg">More Information</a>
+        <div class="card-body">
+          <% if @current_user.present? %>
+            <a href="<%= game_path(game[1].id) %>" class="btn btn-secondary">More Information</a>
+            <% end %>
         </div>
         <div class="card-body">
-          <% if game[1].stock > 0  %>
+          <% if game[1].stock> 0  %>
             <a href="<%= new_order_path(:game => game[1].id) %>" class="btn btn-secondary">Purchase</a>
           <% else %>
-            <p class="red">Out of stock</p>
-          <% end %>
+            <p class="red">Out of stock<p>
+            <% end %>
         </div>
       </div>
     </div>
-    <div class="col-md-3 border border-primary row-1">
-      <div class="card">
-        <%=  image_tag(game[2].image, :class => "card-img-top") %>
-        <div class="card-body">
-          <h8 class="card-title"><%= game[2].name %></h8>
-          <p class="card-text"></p>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Price: <%= game[2].price %></li>
-          <li class="list-group-item">Stock: <%= game[2].stock %></li>
-        </ul>
-        <div class="card-body">
-          <a href="<%= game_path(game[2].id) %>" class="btn btn-secondary btn-lg">More Information</a>
-        </div>
-        <div class="card-body">
-          <% if game[2].stock > 0  %>
-            <a href="<%= new_order_path(:game => game[2].id) %>" class="btn btn-secondary">Purchase</a>
-          <% else %>
-            <p class="red">Out of stock</p>
+  <!-- Column 3: -->
+  <div class="col-md-3">
+    <div class="card reset">
+      <div class="img-wrap"><%=  image_tag(game[2].image, :class => "card-img-top") %></div>
+      <div class="card-body">
+        <h4 class="card-title title"><%= game[2].name %></h4>
+        <p class="card-text"></p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Price: <%= game[2].price %></li>
+        <li class="list-group-item">Stock:  <%= game[2].stock %></li>
+      </ul>
+      <div class="card-body">
+        <% if @current_user.present? %>
+          <a href="<%= game_path(game[2].id) %>" class="btn btn-secondary">More Information</a>
           <% end %>
-        </div>
+      </div>
+      <div class="card-body">
+        <% if game[2].stock> 0  %>
+          <a href="<%= new_order_path(:game => game[2].id) %>" class="btn btn-secondary">Purchase</a>
+        <% else %>
+          <p class="red">Out of stock<p>
+          <% end %>
       </div>
     </div>
-    <!-- --------------------------------------------------------------------- -->
+  </div>
 
-    <div class="col-md-3 border border-primary row-2">
-      <div class="card">
-        <%=  image_tag(game[3].image, :class => "card-img-top") %>
-        <div class="card-body">
-          <h8 class="card-title"><%= game[3].name %></h8>
-          <p class="card-text"></p>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Price: <%= game[3].price %></li>
-          <li class="list-group-item">Stock: <%= game[3].stock %></li>
-        </ul>
-        <div class="card-body">
-          <a href="<%= game_path(game[3].id) %>" class="btn btn-secondary btn-lg">More Information</a>
-        </div>
-        <div class="card-body">
-          <% if game[3].stock > 0  %>
-          <a href="<%= new_order_path(:game => game[3].id) %>" class="btn btn-secondary">Purchase</a>
-          <% else %>
-          <p class="red">Out of stock</p>
-          <% end %>
-        </div>
-      </div>
-    </div>
+<!-- Column 4: -->
+
+
+
   </div>
   <% end %>
 </div>
