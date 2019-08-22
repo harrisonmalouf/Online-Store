@@ -60,17 +60,28 @@ li {
 }
 
 /* Main Page */
+.display-4{
+  text-align: center;
+}
 /* Carrosoul */
 .slide{
   margin: 0 auto;
 }
 .d-block{
-  max-height: 510px;
+  max-height: 480px;
 }
 .carousel {
   opacity: 0.85;
 }
 .title {
+  font-size: 14px;
+  font-weight:
+  
+}
+.price{
+  font-size: 12px;
+}
+.stock{
   font-size: 12px;
 }
 .card-img-top {
@@ -78,14 +89,9 @@ li {
     height: 50vh;
     object-fit: cover;
 }
-
-
-
-
-.div-border {
-  border: black 1px
+.row{
+  padding-top: 5px;
 }
-
 .box-text {
   width: 0 auto;
 }
@@ -94,14 +100,6 @@ li {
   min-height: 94px;
 }
 
-
-
 .red {
 color: red;
-}
-
-
-
-@media (min-width: 775px){
-
 }
