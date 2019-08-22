@@ -43,8 +43,9 @@
         </ul>
         <div class="card-body">
           <% if @current_user.present? %>
-
             <a href="<%= game_path(game[0].id) %>" class="btn btn-primary">More Information</a>
+            <% else %>
+            <a href="<%= login_path %>" class="btn btn-primary">More Information</a>
             <% end %>
         </div>
         <div class="card-body">
@@ -54,6 +55,8 @@
             <% else %>
               <p class="red">Out of stock<p>
             <% end %>
+          <% else %>
+            <a href="<%= login_path %>" class="btn btn-success">Purchase</a>
           <% end %>
         </div>
       </div>
@@ -74,7 +77,9 @@
         <div class="card-body">
           <% if @current_user.present? %>
             <a href="<%= game_path(game[1].id) %>" class="btn btn-primary">More Information</a>
-            <% end %>
+          <% else %>
+            <a href="<%= login_path %>" class="btn btn-primary">More Information</a>
+          <% end %>
         </div>
         <div class="card-body">
           <% if @current_user.present? %>
@@ -83,6 +88,8 @@
             <% else %>
               <p class="red">Out of stock<p>
             <% end %>
+            <% else %>
+            <a href="<%= login_path %>" class="btn btn-success">Purchase</a>
           <% end %>
         </div>
       </div>
@@ -102,6 +109,8 @@
       <div class="card-body">
         <% if @current_user.present? %>
           <a href="<%= game_path(game[2].id) %>" class="btn btn-primary">More Information</a>
+          <% else %>
+          <a href="<%= login_path %>" class="btn btn-primary">More Information</a>
           <% end %>
       </div>
       <div class="card-body">
@@ -111,6 +120,8 @@
           <% else %>
             <p class="red">Out of stock<p>
           <% end %>
+        <% else %>
+          <a href="<%= login_path %>" class="btn btn-success">Purchase</a>
         <% end %>
       </div>
     </div>
@@ -131,7 +142,9 @@
     <div class="card-body">
       <% if @current_user.present? %>
         <a href="<%= game_path(game[3].id) %>" class="btn btn-primary">More Information</a>
-        <% end %>
+      <% else %>
+        <a href="<%= login_path %>" class="btn btn-primary">More Information</a>
+      <% end %>
     </div>
     <div class="card-body">
       <% if @current_user.present? %>
@@ -140,6 +153,8 @@
         <% else %>
         <p class="red">Out of stock<p>
         <% end %>
+        <% else %>
+        <a href="<%= login_path %>" class="btn btn-success">Purchase</a>
       <% end %>
     </div>
   </div>
