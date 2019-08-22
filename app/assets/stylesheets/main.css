@@ -11,14 +11,10 @@ body {
   padding: 20% 20%;
 }
 
-
-.text-holder {
-  display: 2vh;
-}
-
 .embed-responsive {
-  max-width: 300px;
+  /*max-width: 300px;
   max-height: 300px;
+  */
 }
 
 .centered-text {
@@ -26,7 +22,8 @@ body {
 }
 
 .text-padding{
-padding-top: 10px;
+padding: 10px 0px 0px 0px;
+
 }
 
 div .col-sm {
@@ -69,11 +66,10 @@ li {
   border: black 1px
 }
 
+.box-text {
+  width: 0 auto;
+}
+
 .red {
 color: red;
 }
-
-/* Extra small devices (portrait phones, less than 576px) */
-/* No media query for `xs` since this is the default in Bootstrap */
-
-/* Small devices (landscape phones, 576px and up) */

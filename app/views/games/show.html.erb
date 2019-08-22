@@ -13,25 +13,18 @@
         <%= image_tag(@game.image, :class => "rounded") %>
       </div>
     <ul class="list-unstyled">
-      <li><h6 class="text-padding centered-text">Release Date:</h6> <%= @game.release_date %></li>
+      <li class="centered-text"><h5 class="text-padding">Release Date:</h5> <%= @game.release_date %></li>
 
-      <li><h6 class="text-padding centered-text">Genre:</h6> <%= @game.genre %></li>
+      <li class="centered-text"><h5 class="text-padding">Genre:</h5> <%= @game.genre %></li>
 
-      <li><h6 class="text-padding centered-text">Price:</h6> $<%= @game.price %></li>
+      <li class="centered-text"><h5 class="text-padding">Price:</h5> $<%= @game.price %></li>
 
-      <li><h6 class="text-padding centered-text">Stock:</h6> <%= @game.stock %></li>
+      <li class="centered-text"><h5 class="text-padding">Stock:</h5> <%= @game.stock %></li>
 
-      <div class="max-width-text">
-      <li><h6 class="text-padding centered-text">Desciption:</h6> <p class="txt-holder"><%= @game.description %></p></li>
-      </div>
+      <li class="box-text centered-text"><h5 class="text-padding">Desciption:</h5> <p class="text-justify"><%= @game.description %></p></li>
     </ul>
   </div>
-    <div class="embed-responsive embed-responsive-16by9">
+    <div class="embed-responsive embed-responsive-16by9 ">
       <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<%= @id   %>"   frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;   <picture-in-></picture-in->picture" allowfullscreen></iframe>
     </div>
-  <% if @game.stock > 0  %>
-    <%= link_to 'Cart', new_order_path(:game => @game.id), :class => "btn btn-primary btn-lg" %>
-    <% else %>
-    <h1 class="red">Out of stock</h1>
-    <% end %>
 </div>
