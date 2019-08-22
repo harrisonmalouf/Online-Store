@@ -10,26 +10,21 @@
     <% end %>
   </article>
 
-    <div class="row">
+    <div class="row alert alert-success">
       <div class="col-sm-4">
-        <p class="order-ptag"><%= @game.name %></p>
+        <h3><p class="order-ptag"><%= @game.name %></p></h3>
       </div>
       <div class="col-sm-4">
-        <p class="order-ptag">Amount: $<%= @game.price %></p>
+        <h3><p class="order-ptag">Amount: $<%= @game.price %></p></h3>
       </div>
       <div class="col-sm-4">
-        <p class="order-ptag"><%= image_tag(@game.image, :class => "payment-img") %></p>
+        <h3><p class="order-ptag"><%= image_tag(@game.image, :class => "payment-img") %></p></h3>
       </div>
     </div>
 
     <div class="row">
       <div class="col-sm-6">
-        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-        data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-        data-description="Ordering Games"
-        data-amount="<%= @game.price * 100 %>"
-        data-locale="auto"></script>
-        <% end %>
+        <%= link_to 'Back', game_path(params[:game]), :class => "btn btn-danger" %>
       </div>
 
       <div class="col-sm-5">
@@ -37,5 +32,10 @@
       </div>
 
       <div class="col-sm-1">
-        <%= link_to 'Back', game_path(params[:game]), :class => "btn btn-danger" %>
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+        data-description="Ordering Games"
+        data-amount="<%= @game.price * 100 %>"
+        data-locale="auto"></script>
+        <% end %>
       </div>
