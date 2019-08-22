@@ -1,15 +1,17 @@
-<div class="container">
-  <% @game.each_slice(1) do |game| %>
-  <div class="row">
-    <div class="col-sm">
-      <%= game[0].name %>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <% @game.each_slice(1) do |game| %>
+    <div class="row">
+      <div class="col-sm">
+        <p class="stock-page-price"><%= game[0].name %>
+      </div>
+      <div class="col-sm">
+        <p class="stock-page-price">Price: $<%= game[0].price %></p>
+      </div>
+      <div class="col-sm">
+        <p class="stock-page-price"><%= game[0].stock %> |<%= link_to '+', add_game_path(game[0].id), :class => "btn btn-primary btn-lg", :method => 'post' %> <%= link_to '-', sub_game_path(game[0].id), :class => "btn btn-primary btn-lg", :method => 'post' %></p>
+      </div>
     </div>
-    <div class="col-sm">
-      <%= game[0].price %>
-    </div>
-    <div class="col-sm">
-      <%= game[0].stock %> |<%= link_to '+', add_game_path(game[0].id), :class => "btn btn-primary btn-lg", :method => 'post' %> <%= link_to '-', sub_game_path(game[0].id), :class => "btn btn-primary btn-lg", :method => 'post' %>
-    </div>
+    <% end %>
   </div>
-  <% end %>
 </div>

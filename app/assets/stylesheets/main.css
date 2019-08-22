@@ -1,5 +1,9 @@
 body {
-  background: lightblue;
+  background: green;
+}
+
+.stock-page-price {
+  text-align: center;
 }
 
 .order-ptag{
