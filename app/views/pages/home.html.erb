@@ -108,10 +108,12 @@
         </ul>
         <div class="card-body">
           <a href="<%= game_path(game[3].id) %>" class="card-link">More Information</a>
+        </div>
+        <div class="card-body">
           <% if game[3].stock > 0  %>
-            <a href="<%= new_order_path(:game => game[3].id) %>" class="card-link">Purchase</a>
+          <a href="<%= new_order_path(:game => game[3].id) %>" class="card-link">Purchase</a>
           <% else %>
-            <p class="red">Out of stock</p>
+          <p class="red">Out of stock</p>
           <% end %>
         </div>
       </div>

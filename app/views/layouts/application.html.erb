@@ -14,27 +14,44 @@
   <body>
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="">Home</a>
+      <%= link_to "Home", root_path, :class => "navbar-brand"%>
       <% if @current_user.present? %>
         <% if @current_user.admin? %>
-          <%= link_to "All Users", users_path %>
-          <%= link_to "Stock", games_stock_path %>
+          <%= link_to "All Users", users_path, :class => "nav-link active" %>
+          <%= link_to "Stock", games_stock_path, :class => "nav-link active" %>
         <% end %>
-        <%= link_to 'Home', root_path %>
-        <%= link_to 'Edit Profile', edit_user_path(@current_user) %>
-        <%= link_to 'View Profile' , user_path(@current_user) %>
-        <%= link_to "Log out #{ @current_user.email }", login_path, :method => 'delete', :class => 'nav-right' %>
+
+        <%= link_to 'Edit Profile', edit_user_path(@current_user),  :class => "nav-link active" %>
+        <%= link_to 'View Profile' , user_path(@current_user),  :class => "nav-link active" %>
+        <%= link_to "Log out #{ @current_user.email }", login_path, :method => 'delete', :class => "nav-link active"%>
       <% else %>
-        <div>
-          <%= link_to 'Home', root_path %>
-          <%= link_to 'Games', games_path %>
+      <div class="navbar-collapse collaps w-120 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <%= link_to 'Sign Up', new_user_path,  :class => "nav-link active" %>
+            </li>
+              <%= link_to 'Login', login_path,  :class => "nav-link active" %>
+          </ul>
 
-          <%= link_to 'Sign Up', new_user_path %>
 
-          <%= link_to 'Login', login_path %>
-
-        </div>
       <% end %>
+      </div>
+      <!-- <div class="mx-auto order-0">
+       <a class="navbar-brand mx-auto" href="#">Navbar 2</a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+           <span class="navbar-toggler-icon"></span>
+       </button>
+     </div> -->
+     <!-- <div class="navbar-collapse collapse w-120 order-3 dual-collapse2">
+       <ul class="navbar-nav ml-auto">
+           <li class="nav-item">
+               <a class="nav-link" href="#">Right</a>
+           </li>
+           <li class="nav-item">
+               <a class="nav-link" href="#">Link</a>
+           </li>
+       </ul>
+   </div> -->
     </nav>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -46,12 +63,8 @@
 
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
+
+
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Dropdown

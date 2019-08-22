@@ -1,5 +1,5 @@
 body {
-  background: lightblue;
+  background: green;
 }
 
 .order-ptag{
@@ -21,6 +21,14 @@ body {
   max-height: 300px;
 }
 
+.centered-text {
+  text-align: center;
+}
+
+.text-padding{
+padding-top: 10px;
+}
+
 div .col-sm {
   padding-top: 5px;
 }
@@ -29,10 +37,10 @@ li {
   list-style-type: none;
 }
 
-.card-img-top{
+/* .card-img-top{
   max-height: 285px;
   max-width: 405px;
-}
+} */
 
 .btn-lg{
   margin-top: 10px;
