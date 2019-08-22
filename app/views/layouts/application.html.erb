@@ -13,27 +13,29 @@
 
   <body>
     <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <%= link_to "Home", root_path, :class => "navbar-brand"%>
-      <% if @current_user.present? %>
-        <% if @current_user.admin? %>
-          <%= link_to "Stock", games_stock_path, :class => "nav-link active" %>
-        <% end %>
+      <div class="test">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <%= link_to "Home", root_path, :class => "navbar-brand"%>
+            <% if @current_user.present? %>
+              <% if @current_user.admin? %>
+                <%= link_to "Stock", games_stock_path, :class => "navbar-brand"%>
+              <% end %>
 
-        <%= link_to 'Edit Profile', edit_user_path(@current_user),  :class => "nav-link active" %>
-        <%= link_to 'View Profile' , user_path(@current_user),  :class => "nav-link active" %>
-        <%= link_to "Log out #{ @current_user.email }", login_path, :method => 'delete', :class => "nav-link active"%>
-      <% else %>
-      <div class="navbar-collapse collaps w-120 order-3 dual-collapse2">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <%= link_to 'Sign Up', new_user_path,  :class => "nav-link active" %>
-            </li>
-              <%= link_to 'Login', login_path,  :class => "nav-link active" %>
-          </ul>
-      <% end %>
-      </div>
-      </nav>
+            <%= link_to 'Edit Profile', edit_user_path(@current_user), :class => "navbar-brand" %>
+            <%= link_to 'View Profile' , user_path(@current_user),  :class => "navbar-brand" %>
+            <%= link_to "Log out #{ @current_user.user_name }", login_path, :method => 'delete', :class => "navbar-brand navbar-nav ml-auto"%>
+            <% else %>
+            <div class="navbar-collapse collapse w-120 order-3 dual-collapse2">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <%= link_to 'Sign Up', new_user_path,  :class => "navbar-brand" %>
+                </li>
+                  <%= link_to 'Login', login_path,  :class => "navbar-brand" %>
+              </ul>
+            <% end %>
+            </div>
+        </nav>
+    </div>
     <%= yield %>
   </body>
 </html>
