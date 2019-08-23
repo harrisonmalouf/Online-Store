@@ -56,8 +56,8 @@ before_action :check_for_admin, :only => [:index]
 
   def show
      @game = Game.find params[:id]
-     # videos = Yt::Collections::Videos.new
-    # @id = videos.where(q: @game.name + ' Original Trailer', order: 'viewCount').first.id
+     videos = Yt::Collections::Videos.new
+     @id = videos.where(q: @game.name + ' Original Trailer', order: 'viewCount').first.id
    end
 
   def destroy
