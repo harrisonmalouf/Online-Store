@@ -1,9 +1,8 @@
 # README
-# README
 ## PROJECT #2 Description
 ### DESCRIPTION
 
-It's time to put everything that you've learned in the past 5 weeks together! For project #1 you will use your knowledge of front and back-end web development to produce an awesome web application that can be used by friends, family or any of the other billions of people who use the Internet. The type of web application you create is your choice.
+It's time to put everything that you've learned in the past 5 weeks together! For project #2 you will use your knowledge of front and back-end web development to produce an awesome web application that can be used by friends, family or any of the other billions of people who use the Internet. The type of web application you create is your choice.
 
 The objective of this project is to:
 

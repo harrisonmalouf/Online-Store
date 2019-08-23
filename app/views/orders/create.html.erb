@@ -1,6 +1,6 @@
 <div class="jumbotron">
 
-  <h2 class="display-4">Thank You for your purchase of <h3 class="display-4"><%= @game.name %></h3>
-! You paid <strong><%=@game.price %></strong>!</h2>
-
+  <h2 class="display-4">Thank You for your purchase of <h3 class="display-4"><%= @game.name %>!</h3>
+  <h2 class="display-4">You paid $<strong><%=@game.price %></strong>!</h2>
+  <h3 class="thank"><%= image_tag(@game.image, :class => "payment-img") %></h3>
 </div>
