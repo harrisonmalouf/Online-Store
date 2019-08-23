@@ -104,6 +104,10 @@ li {
 color: red;
 }
 
+h1 h2 h3 h4 p {
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
 /* Application.Html.erb */
 
 .test {
