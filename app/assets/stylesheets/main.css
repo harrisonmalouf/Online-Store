@@ -106,10 +106,8 @@ color: red;
 
 /* Application.Html.erb */
 
-.test {
-  margin-left: -70px;
-  margin-right: -80px;
- /* margin-left: -20px; */
+.thank{
+  text-align: center;
 }
 
 .bg-light {
